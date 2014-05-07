@@ -76,6 +76,16 @@ Sometimes during the 90s, a new phenomena was gaining momentum.
  The internet, originally a project developed by the US Army had gained
  traction within the general public, and with it came all its glory and
  all its horrors.
+ Some of the glory it brought was easier access to ideas and discussion
+ around developing software.
+ Methods like Scrum and tools like UML made planning and execution easier
+ [CHECK WHEN UML AND SCRUM APPEARED].
+ On the horror side, the same way people spread and shared ideas for good,
+ they were shared for bad.
+ Hackers, programmers creating trojan horses and computer worms were ever
+ increasing, and security related issues are still as hot as ever.
+ And yet, security related problems aren't being adressed during the planning
+ phase of software development.
 \end_layout
 
 \begin_layout Section

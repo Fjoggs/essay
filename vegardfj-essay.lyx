@@ -84,7 +84,16 @@ Sometimes during the 90s, a new phenomena was gaining momentum.
  they were shared for bad.
  Hackers, programmers, creating trojan horses and computer worms were ever
  increasing, and security related issues are still as hot as ever.
- And yet, there's 
+ And yet, security is still mostly on an 
+\begin_inset Quotes eld
+\end_inset
+
+it's broken, time to fix it
+\begin_inset Quotes erd
+\end_inset
+
+-basis instead of planning out how to design and implement your applications
+ properly with security related issues in mind.
 \end_layout
 
 \begin_layout Section

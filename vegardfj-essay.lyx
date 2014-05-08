@@ -82,38 +82,37 @@ Sometimes during the 90s, a new phenomena was gaining momentum.
  [CHECK WHEN UML AND SCRUM APPEARED].
  On the horror side, the same way people spread and shared ideas for good,
  they were shared for bad.
- Hackers, programmers creating trojan horses and computer worms were ever
+ Hackers, programmers, creating trojan horses and computer worms were ever
  increasing, and security related issues are still as hot as ever.
- And yet, security related problems aren't being adressed during the planning
- phase of software development.
+ And yet, there's 
 \end_layout
 
 \begin_layout Section
-About This Document
-\end_layout
-
-\begin_layout Standard
-Sections and subsections are described below.
-\end_layout
-
-\begin_layout Subsection
-Section description
-\end_layout
-
-\begin_layout Standard
-Sections are bigger then subsections.
-\end_layout
-
-\begin_layout Subsection
-Subsection description
-\end_layout
-
-\begin_layout Standard
-Subsections are smaller than sections.
+Background
 \end_layout
 
 \begin_layout Section
-More Stuff
+Thesis Statement
+\end_layout
+
+\begin_layout Section
+Success Criteria
+\end_layout
+
+\begin_layout Section
+Research Method
+\end_layout
+
+\begin_layout Section
+Conclusion
+\end_layout
+
+\begin_layout Section
+References
+\end_layout
+
+\begin_layout Section
+Appendix: Master Thesis Outline
 \end_layout
 
 \end_body

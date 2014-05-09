@@ -136,11 +136,15 @@ We define the research questions for our paper.
 \end_layout
 
 \begin_layout Quote
+
+\shape italic
 How can security-issues related to software become a core part of the planning
  phase during development?
 \end_layout
 
 \begin_layout Quote
+
+\shape italic
 How can a user describe a system so that the program understands it and
  can analyse security-related issues, and provide solutions for that exact
  system?

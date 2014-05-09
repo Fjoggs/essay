@@ -82,8 +82,8 @@ Sometimes during the 90s, a new phenomena was gaining momentum.
  [CHECK WHEN UML AND SCRUM APPEARED].
  On the horror side, the same way people spread and shared ideas for good,
  they were shared for bad.
- Hackers, programmers, creating trojan horses and computer worms were ever
- increasing, and security related issues are still as hot as ever.
+ Persons with bad intents creating trojan horses and computer worms were
+ ever increasing, and security related issues are still as hot as ever.
  And yet, security is still mostly on an 
 \begin_inset Quotes eld
 \end_inset
@@ -94,6 +94,9 @@ it's broken, time to fix it
 
 -basis instead of planning out how to design and implement your applications
  properly with security related issues in mind.
+ In this paper we'll take a look at a possible implementation of an application
+ that would try to solve this.
+ 
 \end_layout
 
 \begin_layout Section
@@ -104,8 +107,52 @@ Background
 Thesis Statement
 \end_layout
 
+\begin_layout Standard
+In light of the background information, how can we best design an application
+ to solve the needs we've highlighted so far? In short, our application
+ has to answer the statement: 
+\shape italic
+how can we create an application that would highlight security issues early
+ in the planning phase, and integrate this as good as possible with already
+ existing specification related methods.
+\end_layout
+
+\begin_layout Standard
+We will discuss in the success criterias how to implement this in a way
+ that would let our application become an asset to the planning phase of
+ software-related development projects.
+ 
+\end_layout
+
+\begin_layout Subsection
+Research Questions
+\end_layout
+
+\begin_layout Standard
+We define the research questions for our paper.
+ We will use these questions in our thesis as a guideline for the direction
+ of the project.
+ 
+\end_layout
+
+\begin_layout Quote
+How can security-issues related to development more easily be identified
+ and accounted for?
+\end_layout
+
+\begin_layout Quote
+How can a user describe a system so that the program understands it and
+ can analyse security-related issues, and provide solutions for that exact
+ system?
+\end_layout
+
 \begin_layout Section
 Success Criteria
+\end_layout
+
+\begin_layout Standard
+In order to best realize our goal, we need to set some criterias for success;
+ what do we define as a success, and how can we achieve it.
 \end_layout
 
 \begin_layout Section

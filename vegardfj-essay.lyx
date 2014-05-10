@@ -145,12 +145,11 @@ How can security-issues related to software become a core part of the planning
 \begin_layout Quote
 
 \shape italic
-How can a user describe a system so that the program understands it and
- can analyse security-related issues, and provide solutions for that exact
- system?
+How can we best implement an application to fit the current planning processes
+ relevant to software- and specification-planning?
 \end_layout
 
-\begin_layout Section
+\begin_layout Subsection
 Success Criteria
 \end_layout
 
@@ -160,7 +159,15 @@ In order to best realize our goal, we need to set some criterias for success;
 \end_layout
 
 \begin_layout Section
-Research Method
+System breakdown
+\end_layout
+
+\begin_layout Subsection
+Example runthrough
+\end_layout
+
+\begin_layout Subsection
+Explanation
 \end_layout
 
 \begin_layout Section

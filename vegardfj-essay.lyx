@@ -59,6 +59,24 @@
 
 \begin_body
 
+\begin_layout Standard
+Front Page
+\begin_inset Newpage newpage
+\end_inset
+
+
+\begin_inset CommandInset toc
+LatexCommand tableofcontents
+
+\end_inset
+
+
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
 \begin_layout Section
 Introduction
 \end_layout
@@ -108,9 +126,9 @@ Thesis Statement
 \end_layout
 
 \begin_layout Standard
-In light of the background information, how can we best design an application
- to solve the needs we've highlighted so far? In short, our application
- has to answer the statement: 
+In light of the background information, how can we best design an application,
+ hereby referred to as SecuritySoftware, to solve the needs we've highlighted
+ so far? In short, our application has to answer the statement: 
 \shape italic
 how can we create an application that would highlight security issues early
  in the planning phase, and integrate this as good as possible with already
@@ -138,28 +156,226 @@ We define the research questions for our paper.
 \begin_layout Quote
 
 \shape italic
+\begin_inset Quotes eld
+\end_inset
+
 How can security-issues related to software become a core part of the planning
  phase during development?
+\begin_inset Quotes erd
+\end_inset
+
+
 \end_layout
 
 \begin_layout Quote
 
 \shape italic
+\begin_inset Quotes eld
+\end_inset
+
 How can we best implement an application to fit the current planning processes
  relevant to software- and specification-planning?
+\begin_inset Quotes erd
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subsection
-Success Criteria
+Success Criterias
+\end_layout
+
+\begin_layout Subsubsection
+General Criterias
 \end_layout
 
 \begin_layout Standard
 In order to best realize our goal, we need to set some criterias for success;
  what do we define as a success, and how can we achieve it.
+ For SecuritySoftware to be considered a success, several variables have
+ to be met.
+ For software developers, important functions for an application is responsivene
+ss, cross-platform support and easy to use.
+ These are all general sucess criterias that are 
+\begin_inset Quotes eld
+\end_inset
+
+self-explanatory
+\begin_inset Quotes erd
+\end_inset
+
+.
+ Responsiveness is important, because when you're developing software, you
+ do not want to be slowed down because the applications you are using is
+ not working fluently, or keeping up with your speed.
+ Cross-platform has become ever more important with the rise of Apples iMacs.
+ More and more people use 
+\begin_inset Quotes eld
+\end_inset
+
+Mac's
+\begin_inset Quotes erd
+\end_inset
+
+ to develop software, but there's also a large userbase that works on Linux.
+ Windows also have a large userbase, and supporting them is pretty much
+ mandatory and this day and age.
+ Easy to use is subjective, but SecuritySoftware shouldn't require any form
+ of extensive programming knowledge or certifications in security.
+\end_layout
+
+\begin_layout Subsubsection
+SecuritySoftware Specific Criterias
+\end_layout
+
+\begin_layout Standard
+For SecuritySoftware to be considered a success, the following criterias
+ has to be met:
+\end_layout
+
+\begin_layout Quote
+
+\shape italic
+\begin_inset Quotes eld
+\end_inset
+
+SecuritySoftware's database has to be easily updated for the program to
+ stay relevant.
+\begin_inset Quotes erd
+\end_inset
+
+
+\end_layout
+
+\begin_layout Quote
+
+\shape italic
+\begin_inset Quotes eld
+\end_inset
+
+SecuritySoftware should require no former knowledge regarding security or
+ programming.
+\begin_inset Quotes eld
+\end_inset
+
+
 \end_layout
 
 \begin_layout Section
 System breakdown
+\end_layout
+
+\begin_layout Standard
+SecuritySoftware's two main components is the progam itself, and a database
+ containing all the information regarding securty issues, and their correspondin
+g solution.
+ (Or lack thereof) The database will be located online, meaning SecuritySoftware
+ will not be useful to someone without internet access.
+ Possible feature to allow a user to download the database locally is a
+ potential fix for this, but considering how often issues are discovered
+ and how quick fixes for this can be discovered, this is a sub-par solution.
+ In this day and age, it's almost impossible to develop software without
+ an internet connection.
+ Therefore, requiring an internet connection should not be a big problem.
+\end_layout
+
+\begin_layout Standard
+SecuritySoftware will consist of 4 different steps, each one dependant on
+ the one beforehand.
+ (apart from step 1) The user will be guided through each step, and if needed,
+ can jump back to a previous step to change, add or remove information.
+ 
+\end_layout
+
+\begin_layout Subsection
+Step By Step Explanation
+\end_layout
+
+\begin_layout Standard
+Below we'll list the rundown of each step, and what you need to do to complete
+ each one.
+\end_layout
+
+\begin_layout Subsubsection
+Step 1 - Client Side Information
+\end_layout
+
+\begin_layout Standard
+The first step a user of SecuritySoftware has to complete, is to list what
+ kind of technology the client will be running to use the application that
+ is going to be created.
+ The reason for this is that each system has its own strengths and weaknesses
+ when it comes to security, and certain flaws will only be present with
+ a specific system.
+ The user is presented by several checkboxes, each listing a system that
+ they could choose to include in their analysis.
+ Examples include iOS, Android, Web browsers on Windows 8 etc.
+ 
+\end_layout
+
+\begin_layout Subsubsection
+Step 2 - Listing Features
+\end_layout
+
+\begin_layout Standard
+The next step is perhaps the most crucial.
+ For SecuritySoftware to be of any use, it needs to know what features you
+ are planning to offer with your application.
+ Without features, security wouldn't be an issue! Here the user will be
+ presented with a search box, along with a list of commonly used features.
+ The search box will be updated as you type, meaning if you're looking for
+ authentication, it would show up while typing 
+\begin_inset Quotes eld
+\end_inset
+
+auth
+\begin_inset Quotes erd
+\end_inset
+
+.
+ Each feature will also be applied a 
+\begin_inset Quotes eld
+\end_inset
+
+tag
+\begin_inset Quotes erd
+\end_inset
+
+, meaning someone could search for 
+\begin_inset Quotes eld
+\end_inset
+
+Log In
+\begin_inset Quotes erd
+\end_inset
+
+ and they would be able to select 
+\begin_inset Quotes eld
+\end_inset
+
+Authentication.
+\begin_inset Quotes erd
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Subsubsection
+Step 3 - Server Side Information
+\end_layout
+
+\begin_layout Standard
+The last step SecuritySoftware needs from the user, is information on how
+ the server side will look like.
+ Smaller systems might not need a database to handle authentication, and
+ the issues would therefore be different.
+ When you add a system to this step, you'll be asked to list what this system
+ will handle for each feature.
+ If you have a database, and you want your users credentials to be stored
+ on the database, then the user would list this after adding the database.
+ This means that SecuritySoftware would know that your database contains
+ highly sensitive information, and you need to safely store it in some way
+ in case of a security breach.
 \end_layout
 
 \begin_layout Subsection

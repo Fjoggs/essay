@@ -1,0 +1,1533 @@
+#LyX 2.0 created this file. For more info see http://www.lyx.org/
+\lyxformat 413
+\begin_document
+\begin_header
+\textclass article
+\use_default_options false
+\maintain_unincluded_children false
+\language english
+\language_package none
+\inputencoding auto
+\fontencoding default
+\font_roman default
+\font_sans default
+\font_typewriter default
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_amsmath 1
+\use_esint 1
+\use_mhchem 0
+\use_mathdots 0
+\cite_engine basic
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\use_refstyle 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+%% Standard headers:
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+DeclareOption
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+english
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+
+\begin_inset FormulaMacro
+\renewcommand{\IfiF}[3]{eng}
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+ExecuteOptions
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+norsk
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+ProcessOptions
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+relax
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+%% Initial code:
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+RequirePackage
+\end_layout
+
+\end_inset
+
+[T1]
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+fontenc
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+RequirePackage
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+eso-pic,graphicx,keyval,xifthen
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+IfFileExists
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+type1cm.sty
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+RequirePackage
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+type1cm
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+IfFileExists
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+type1ec.sty
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+RequirePackage
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+type1ec
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+%% The main command:
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset FormulaMacro
+\newcommand{\ififorside}[1][]{\begin{titlepage} \newcommand{\and}{, }\setkeys{IfiF@keys}{#1} \AddToShipoutPictureBG*{\IfiF @print@background} \ifthenelse{\equal{}{\IfiF @dept}} {} {\AddToShipoutPictureFG*{\IfiF @print@dept}} \AddToShipoutPictureFG*{\IfiF @print@title} \null\end{titlepage} \if@twoside \IfiF @blankpage \fi}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+%% The options:
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+define@key
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+IfiF@keys
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+dept
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+
+\begin_inset FormulaMacro
+\renewcommand{\IfiF}[3]{#1}
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+define@key
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+IfiF@keys
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+fac
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+
+\begin_inset FormulaMacro
+\renewcommand{\IfiF}[2]{#1}
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+define@key
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+IfiF@keys
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+isbn
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+
+\begin_inset FormulaMacro
+\renewcommand{\IfiF}[3]{#1}
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+define@key
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+IfiF@keys
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+issn
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+
+\begin_inset FormulaMacro
+\renewcommand{\IfiF}[3]{#1}
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+define@key
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+IfiF@keys
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+n
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+
+\begin_inset FormulaMacro
+\renewcommand{\IfiF}[3]{#1}
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset FormulaMacro
+\renewcommand{\IfiF}[3]{}
+\end_inset
+
+ 
+\begin_inset FormulaMacro
+\renewcommand{\IfiF}[2]{}
+\end_inset
+
+ 
+\begin_inset FormulaMacro
+\renewcommand{\IfiF}[3]{}
+\end_inset
+
+ 
+\begin_inset FormulaMacro
+\renewcommand{\IfiF}[3]{0806-3036}
+\end_inset
+
+ 
+\begin_inset FormulaMacro
+\renewcommand{\IfiF}[3]{0}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+%% Additional commands:
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset FormulaMacro
+\newcommand{\subtitle}[1]{\renewcommand{\IfiF}[4]{#1}}
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+subtitle{
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+%% Include the title page background:
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset FormulaMacro
+\newcommand{\}{}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+%% Include the name of the university and department (if needed):
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset FormulaMacro
+\newcommand{\}{}
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+% quite like it.
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+%% Include the title, subtitle, author and date:
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset FormulaMacro
+\newcommand{\}{}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+%% Find the best font:
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset FormulaMacro
+\newcommand{\}{}
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+% Helvetica is always available, but use
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+IfFileExists
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+t1ua1.fd
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+
+\begin_inset FormulaMacro
+\newcommand{\}{}
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+% Arial if possible.
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+%% Determine the term (as in "Spring 2012"):
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+newcounter{IfiF@cur@year}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+setcounter{IfiF@cur@year}{
+\backslash
+the
+\backslash
+year}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+newcounter{IfiF@cur@month}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+setcounter{IfiF@cur@month}{
+\backslash
+the
+\backslash
+month}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+ifthenelse
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+theIfiF@cur@month
+\end_layout
+
+\end_inset
+
+<7
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+
+\begin_inset FormulaMacro
+\newcommand{\}{}
+\end_inset
+
+
+\begin_inset FormulaMacro
+\newcommand{\}{}
+\end_inset
+
+
+\begin_inset FormulaMacro
+\newcommand{\}{}
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+
+\begin_inset FormulaMacro
+\newcommand{\}{}
+\end_inset
+
+
+\begin_inset FormulaMacro
+\newcommand{\}{}
+\end_inset
+
+
+\begin_inset FormulaMacro
+\newcommand{\}{}
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset FormulaMacro
+\newcommand{\}{}
+\end_inset
+
+ 
+\begin_inset FormulaMacro
+\newcommand{\}{}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+%% Other utilities:
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset FormulaMacro
+\newcommand{\}{}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+endinput
+\end_layout
+
+\end_inset
+
+ 
+\end_layout
+
+\end_body
+\end_document

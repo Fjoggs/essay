@@ -292,8 +292,8 @@ Step By Step Explanation
 \end_layout
 
 \begin_layout Standard
-Below we'll list the rundown of each step, and what you need to do to complete
- each one.
+Below we'll list the rundown of each step you'll encounter when running
+ SecuritySoftware, and what you need to do to complete each one.
 \end_layout
 
 \begin_layout Subsubsection
@@ -369,7 +369,7 @@ The last step SecuritySoftware needs from the user, is information on how
  the server side will look like.
  Smaller systems might not need a database to handle authentication, and
  the issues would therefore be different.
- When you add a system to this step, you'll be asked to list what this system
+ When you add a server to this step, you'll be asked to list what this server
  will handle for each feature.
  If you have a database, and you want your users credentials to be stored
  on the database, then the user would list this after adding the database.
@@ -378,8 +378,640 @@ The last step SecuritySoftware needs from the user, is information on how
  in case of a security breach.
 \end_layout
 
+\begin_layout Subsubsection
+Final Step - The Analysis
+\end_layout
+
+\begin_layout Standard
+Until now, SecuritySoftware hasn't really done anything.
+ It's just asked the user to list the information about how the system is
+ constructed.
+ The real meat of the application is when the analysis comes in.
+ 
+\end_layout
+
+\begin_layout Standard
+So how does the analysis work? SecuritySoftware relies on a database of
+ information.
+ This database is constructed with several tables.
+ There's a table for each step, a table containing issues and a table containing
+ solutions.
+ SecuritySoftware then creates an SQL request containing 1 client and 1
+ feature.
+ (An example would be (pseudocode): select from issues where client=client
+ & feature=feature) Then it would fetch all corresponding solutions to this
+ issue.
+ After all clients have been analised, it will check each the feature+server
+ combinations.
+\end_layout
+
 \begin_layout Subsection
-Example runthrough
+Example Runthrough
+\end_layout
+
+\begin_layout Standard
+To show what a runthrough with SecuritySoftware would look like, we'll guide
+ you through it step-by-step.
+ The system is an information application to be used in hospitals, mainly
+ targeting mobile operating systems, but also webbrowsers on PCs.
+ It will support a chat system, letting you send instant messages to customer
+ support if needed.
+ This feature will require you to log in, meaning authentication has to
+ be in place.
+ This system is hereby reffered to as HospitalApplication.
+\end_layout
+
+\begin_layout Subsubsection
+Step 1 - Clients
+\end_layout
+
+\begin_layout Standard
+HospitalApplication is a system that will be run on both Android systems,
+ Apple systems and regular PCs.
+ 
+\end_layout
+
+\begin_layout Standard
+We start with Apple first.
+ Our software will run on mobile devices, both cellphones and tablets/pads.
+ This means we'll choose iOS 7 from the list.
+ Most of the time, you'll always choose the latest version of a client,
+ but in some cases you might want to target phones that can't run the latest
+ versions, meaning if you want to support more, you have to intentionally
+ release it on lower versions.
+ We would therefore list this aswell.
+ 
+\end_layout
+
+\begin_layout Standard
+Next up is Android.
+ To make it easier to follow, we'll simply add support for the latest version,
+ which is 4.4.2 KitKat.
+ This will allow our application to run on both cellphones and tablets supported
+ by this version.
+\end_layout
+
+\begin_layout Standard
+Both Apple and Android have mobile web browsers, and because we're creating
+ an application that's also accessable via web-browsers, we need to let
+ SecuritySoftware know this by checking an option that says 
+\begin_inset Quotes eld
+\end_inset
+
+Include mobile web-browsers
+\begin_inset Quotes erd
+\end_inset
+
+ when adding Android and iOS to our list.
+\end_layout
+
+\begin_layout Standard
+Last we add support for web-browsers run from PCs.
+ See Table 1 for an overview of what this would look like.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float table
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="5" columns="3">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+Version
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+Additional Options
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+X For Yes
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+iOS 7
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Include mobile web-browsers?
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+X
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+iOS 6
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Include mobile web-browsers?
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+X
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Android 4.4 KitKat
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Include mobile web-browsers?
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+X
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+PC Web Browsers
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Step 1 - Client Information
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Step 2 - Features
+\end_layout
+
+\begin_layout Standard
+Next up we need to list the features we want our program to support.
+ As explained earlier, the ones supported for analysis all exist within
+ SecuritySoftware.
+ Popular choices show up in a list.
+ Authentication is almost standard these days for mobile applications, so
+ it shows up in the list of most used features.
+ HospitalApplication also supports instant messaging, and we want these
+ conversations to be logged, so we need to add a feature for storing logs
+ somewhere.
+ When the user adds Instant Messaging to the list of features, SecuritySoftware
+ will ask if the feature requires a user to be logged in.
+ Because we want to log our chats, we need this to be set to true.
+ The next step, we'll choose where to store our logs and how these features
+ will communicate from the server and to the client.
+\end_layout
+
+\begin_layout Standard
+List of features: Authentication (Log in, log out) via username and password,
+ Instant Messaging, Chat logging of Instant Messaging.
+ Please refer to table 2 for an overview of what this could look like.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float table
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="4" columns="3">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+Features
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+Additional Information
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+X For Yes 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Authentication
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Requires a username and a password
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\shape italic
+Default
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Instant messaging
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Require log in?
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+X
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Chat log
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Stores chat logs
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\shape italic
+Default
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Feature Information
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Step 3 - Server
+\end_layout
+
+\begin_layout Standard
+We've reached the step where we list how the client and server will communicate
+ with each other for each feature.
+ When a client wants to log in to HospitalApplication, he'll enter his credentia
+ls.
+ This will then be sent to the server, which will ask the database if the
+ given credentials match any in the database.
+\end_layout
+
+\begin_layout Standard
+When a client wants to use the instant messaging service, it will send a
+ request and his message to the server, which will then be logged in the
+ database.
+ The server will then send the message to the correct recipient.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float table
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Tabular
+<lyxtabular version="3" rows="3" columns="3">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Server Information
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Features
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Description
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Web Server
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Authentication, Instant Messaging, Chat log
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Request database
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Database
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Authentication, Instant Messaging, Chat log
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Stores information
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Server Information
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Final Step - Analysis
 \end_layout
 
 \begin_layout Subsection
@@ -392,10 +1024,6 @@ Conclusion
 
 \begin_layout Section
 References
-\end_layout
-
-\begin_layout Section
-Appendix: Master Thesis Outline
 \end_layout
 
 \end_body

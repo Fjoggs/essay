@@ -25,6 +25,7 @@
 \bibtex_command default
 \index_command default
 \paperfontsize default
+\spacing single
 \use_hyperref false
 \papersize default
 \use_geometry false
@@ -85,40 +86,32 @@ Introduction
 Software development has evolved from something you'd do in your garage
  after work, to the backbone of society.
  This growth has spawned numerous companies, and in turn increased the need
- for structure, planning and working methods that can provide results, regardele
-ss of project size.
-\end_layout
-
-\begin_layout Standard
-Sometimes during the 90s, a new phenomena was gaining momentum.
- The internet, originally a project developed by the US Army had gained
- traction within the general public, and with it came all its glory and
- all its horrors.
- Some of the glory it brought was easier access to ideas and discussion
- around developing software.
- Methods like Scrum and tools like UML made planning and execution easier
- [CHECK WHEN UML AND SCRUM APPEARED].
- On the horror side, the same way people spread and shared ideas for good,
- they were shared for bad.
- Persons with bad intents creating trojan horses and computer worms were
- ever increasing, and security related issues are still as hot as ever.
- And yet, security is still mostly on an 
-\begin_inset Quotes eld
-\end_inset
-
-it's broken, time to fix it
-\begin_inset Quotes erd
-\end_inset
-
--basis instead of planning out how to design and implement your applications
- properly with security related issues in mind.
- In this paper we'll take a look at a possible implementation of an application
- that would try to solve this.
+ for structure, planning and working methods that can provide results, regardles
+s of project size.
+ With the ever increasing market for computers and PCs in general, interest
+ grew for people who sought to abuse security holes in the systems.
+ Hacking, creating computer worms and abusing loopholes became an ever increasin
+g threat, in a market that seemed to grow endless.
  
 \end_layout
 
-\begin_layout Section
-Background
+\begin_layout Standard
+Many companies started up businesses revolving solely around security.
+ Norton, McAfee & Avast are some examples of companies that have created
+ various softwares for security.
+ Mostly virus scanning programs and firewall applications.
+ But security related issues still haven't reached a significant part of
+ the planning process of software development.
+ Instead of defending from attacks, why not simply prevent them from happening
+ in the first place? 
+\end_layout
+
+\begin_layout Standard
+In this paper, we'll talk about a proposed software, designed to help plan
+ development with security in mind.
+ How can we assure that our users are secure using our application.
+ What precautions do we need to take, and what issues are more critical
+ than others? 
 \end_layout
 
 \begin_layout Section
@@ -294,6 +287,9 @@ Step By Step Explanation
 \begin_layout Standard
 Below we'll list the rundown of each step you'll encounter when running
  SecuritySoftware, and what you need to do to complete each one.
+ If you need to, SecuritySoftware will allow you to go back to a previous
+ step if changes has to be made.
+ This will then change the final analysis.
 \end_layout
 
 \begin_layout Subsubsection
@@ -398,11 +394,264 @@ So how does the analysis work? SecuritySoftware relies on a database of
  solutions.
  SecuritySoftware then creates an SQL request containing 1 client and 1
  feature.
- (An example would be (pseudocode): select from issues where client=client
+ (An example would be (pseudocode): select from issue where client=client
  & feature=feature) Then it would fetch all corresponding solutions to this
  issue.
- After all clients have been analised, it will check each the feature+server
- combinations.
+ After all clients have been analysed, it will do the same for every feature+ser
+ver combination.
+\end_layout
+
+\begin_layout Standard
+In short, SecuritySoftware will check all possible combinations, to see
+ if there's a match in the Issue table with any of the 3 
+\begin_inset Quotes eld
+\end_inset
+
+primary tables
+\begin_inset Quotes erd
+\end_inset
+
+.
+ (Client, Feature, Server) If Client number 1 have an entry in the client-issue
+ table, then that solution for that client would be given as a result.
+ Several clients might have issues that are not connected to a specific
+ feature, but just the client in general.
+ This would then be picked up, because it would show up as an entry in the
+ client-issue table.
+\end_layout
+
+\begin_layout Standard
+Refer to Table 1 for  a potential mockup of what SecuritySoftware's database
+ could look like.
+ Issues and solutions are seperate tables, because several issues could
+ share the same solution, meaning the system would have an influx of redundant
+ entires in its database.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float table
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+Each column is a seperate table in the database.
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="2" columns="9">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+Client
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+Feature
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+Server
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+Issue
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+Solution
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+iOS 7
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Authentication
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Database
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+SQL Injection
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Prepared Statements
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\begin_inset Caption
+
+\begin_layout Plain Layout
+SecuritySoftware Database Mockup
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subsection
@@ -462,12 +711,12 @@ Include mobile web-browsers
 \begin_inset Quotes erd
 \end_inset
 
- when adding Android and iOS to our list.
+.
 \end_layout
 
 \begin_layout Standard
 Last we add support for web-browsers run from PCs.
- See Table 1 for an overview of what this would look like.
+ See Table 2 for an overview of what this would look like.
 \end_layout
 
 \begin_layout Standard
@@ -660,10 +909,6 @@ Step 1 - Client Information
 
 \end_layout
 
-\begin_layout Plain Layout
-
-\end_layout
-
 \end_inset
 
 
@@ -821,7 +1066,7 @@ Chat log
 \begin_inset Text
 
 \begin_layout Plain Layout
-Stores chat logs
+Open for everyone to read?
 \end_layout
 
 \end_inset
@@ -831,8 +1076,8 @@ Stores chat logs
 
 \begin_layout Plain Layout
 
-\shape italic
-Default
+\series bold
+X
 \end_layout
 
 \end_inset
@@ -854,10 +1099,6 @@ Feature Information
 
 \end_inset
 
-
-\end_layout
-
-\begin_layout Plain Layout
 
 \end_layout
 
@@ -1014,16 +1255,497 @@ Server Information
 Final Step - Analysis
 \end_layout
 
-\begin_layout Subsection
-Explanation
+\begin_layout Standard
+Now for the analysis, where SecuritySoftware finally does some work other
+ than holding your own through the process.
+ All issues and solutions proposed here are not real life situations, and
+ are simply created for simulation purposes.
+\end_layout
+
+\begin_layout Paragraph
+Clients:
+\end_layout
+
+\begin_layout Standard
+First, we look at the clients and see if there's any matches with the issue
+ table.
+ There's no known issues with either iOS clients right now, but Android
+ 4.4 KitKat has a Java-issue where ASyncTask can be intercepted by outsiders.
+ Solution to this is to use a different means of communication when creating
+ the Android application, namely the 
+\begin_inset Quotes eld
+\end_inset
+
+Service
+\begin_inset Quotes erd
+\end_inset
+
+ class.
+ There's no known security flaws with PC Web Browsers right now, so this
+ means we've completed the client-issue step.
+\end_layout
+
+\begin_layout Paragraph
+Features:
+\end_layout
+
+\begin_layout Standard
+Next up, is checking the features.
+ First feature is authentication.
+ This is perhaps the most important issue revolving around security.
+ Stolen identities and credentials is a big problem in this day and age,
+ and whenever a solution for an issue is implemented, a new issue has already
+ been discovered.
+ SecuritySoftware's database is easily updated, and will therefore keep
+ up with these changes as long as someone is maintaining it.
+ For this simulation, we'll simply list the issue as 
+\begin_inset Quotes eld
+\end_inset
+
+vulnerable to attacks
+\begin_inset Quotes erd
+\end_inset
+
+ and list the solution as 
+\begin_inset Quotes eld
+\end_inset
+
+md5-crypt on both usernames and passwords, so that in case of a leak it
+ still has to be decrypted to be of any value.
+\begin_inset Quotes erd
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Instant messaging and chat logging has no known security issues for our
+ simulation.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float table
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="5" columns="3">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+Client
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+Issue
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+Solution
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+iOS 7
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+No known issues
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+N/A
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+iOS 6
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+No known issues
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+N/A
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Android 4.4 KitKat
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Java: ASyncTask vulnerable
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Use 
+\begin_inset Quotes eld
+\end_inset
+
+Service
+\begin_inset Quotes erd
+\end_inset
+
+ class instead.
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+PC Web Browsers
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+No known issues
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+N/A
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="4" columns="3">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+Feature
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+Issue
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+Solution
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Authentication
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Vulnerable to stolen credentials
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+MD5-Crypt usernames and passwords
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Instant messaging
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+No known issues
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+N/A
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Chat log
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+No known issues
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+N/A
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Client & feature analysis
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph
+Servers: 
+\series medium
+Because some systems will use databases to contain their information, there
+ might be need of an extra layer of security in between the server and the
+ database.
+ This step in the analysis will provide that information, in correlation
+ with the features.
+ Chat log will be open for everyone in our HospitalApplication.
+ It's therefore not needed to do anything special with these on our database,
+ because you can read it anyway.
+\end_layout
+
+\begin_layout Paragraph
+Clients and features combined:
+\end_layout
+
+\begin_layout Standard
+We've now completed the individual steps for client and feature, but we
+ also need to check combinations of these.
+ Maybe there's special conditions where authentication on iOS-devices are
+ more vulnerable than Android? All combinations will therefore be checked.
+ 
+\end_layout
+
+\begin_layout Standard
+When all these steps are completed, SecuritySoftware has finished analysing
+ the application and the user can either change some of the information
+ he provided earlier, or add the results to his potential software specification.
 \end_layout
 
 \begin_layout Section
-Conclusion
+Final Thoughts
+\end_layout
+
+\begin_layout Standard
+SecuritySoftware's goal is to become part of the planning process of software
+ development.
+ The process has to be as smooth and easy as possible, while maintaining
+ good results that are relevant today.
+ Problems can arise when SecuritySoftware tries to match clients with features
+ or servers when trying to find issues.
+ As development begins, these problems will be more clear and possible changes
+ to how the analysis work will most likely happen.
+ But in the end, the core idea will remain the same.
+\end_layout
+
+\begin_layout Standard
+Additional features that might be relevant would be to include what programming
+ language the system is to be implemented in, and increasing the information
+ about the features you want to include.
+ Should a specific feature require log in? Can anyone see it? Only accessable
+ for certain users? These are all questions that are relevant to development,
+ and will hopefully find it's way into SecuritySoftwares knowledge database
+ in some way or the other.
+\end_layout
+
+\begin_layout Standard
+In the end, SecuritySoftware will be an interesting project that will most
+ likely serve as a prototype for future programs, or an idea to base new
+ software upon.
 \end_layout
 
 \begin_layout Section
 References
+\end_layout
+
+\begin_layout Standard
+http://docs.oracle.com/javaee/6/api/javax/xml/ws/Service.html
+\end_layout
+
+\begin_layout Standard
+http://developer.android.com/reference/android/os/AsyncTask.html
+\end_layout
+
+\begin_layout Standard
+http://no.norton.com/
+\end_layout
+
+\begin_layout Standard
+http://www.avast.com/no-no/
+\end_layout
+
+\begin_layout Standard
+http://www.mcafee.com/no/
 \end_layout
 
 \end_body

@@ -88,8 +88,9 @@ Software development has evolved from something you'd do in your garage
  This growth has spawned numerous companies, and in turn increased the need
  for structure, planning and working methods that can provide results, regardles
 s of project size.
- With the ever increasing market for computers and PCs in general, interest
- grew for people who sought to abuse security holes in the systems.
+ With the ever increasing market for computers and PCs in general, more
+ and more people with malicious intents learned ways to steal and obtain
+ information of high value.
  Hacking, creating computer worms and abusing loopholes became an ever increasin
 g threat, in a market that seemed to grow endless.
  
@@ -97,13 +98,34 @@ g threat, in a market that seemed to grow endless.
 
 \begin_layout Standard
 Many companies started up businesses revolving solely around security.
- Norton, McAfee & Avast are some examples of companies that have created
- various softwares for security.
+ Norton 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Norton"
+
+\end_inset
+
+, McAfee 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "McAfee"
+
+\end_inset
+
+ & Avast 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Avast"
+
+\end_inset
+
+ are some examples of companies that have created various softwares for
+ security.
  Mostly virus scanning programs and firewall applications.
  But security related issues still haven't reached a significant part of
  the planning process of software development.
- Instead of defending from attacks, why not simply prevent them from happening
- in the first place? 
+ Instead of repairing damages after an attack, why not simply prevent them
+ from happening in the first place? 
 \end_layout
 
 \begin_layout Standard
@@ -140,7 +162,7 @@ Research Questions
 \end_layout
 
 \begin_layout Standard
-We define the research questions for our paper.
+We define the research questions for our thesis.
  We will use these questions in our thesis as a guideline for the direction
  of the project.
  
@@ -185,8 +207,6 @@ General Criterias
 \begin_layout Standard
 In order to best realize our goal, we need to set some criterias for success;
  what do we define as a success, and how can we achieve it.
- For SecuritySoftware to be considered a success, several variables have
- to be met.
  For software developers, important functions for an application is responsivene
 ss, cross-platform support and easy to use.
  These are all general sucess criterias that are 
@@ -232,7 +252,7 @@ For SecuritySoftware to be considered a success, the following criterias
 \begin_inset Quotes eld
 \end_inset
 
-SecuritySoftware's database has to be easily updated for the program to
+SecuritySoftware's database has to be easily updated for the software to
  stay relevant.
 \begin_inset Quotes erd
 \end_inset
@@ -260,7 +280,7 @@ System breakdown
 
 \begin_layout Standard
 SecuritySoftware's two main components is the progam itself, and a database
- containing all the information regarding securty issues, and their correspondin
+ containing all the information regarding security issues and their correspondin
 g solution.
  (Or lack thereof) The database will be located online, meaning SecuritySoftware
  will not be useful to someone without internet access.
@@ -305,7 +325,7 @@ The first step a user of SecuritySoftware has to complete, is to list what
  a specific system.
  The user is presented by several checkboxes, each listing a system that
  they could choose to include in their analysis.
- Examples include iOS, Android, Web browsers on Windows 8 etc.
+ Examples include iOS, Android, Web browsers on PCs.
  
 \end_layout
 
@@ -392,8 +412,8 @@ So how does the analysis work? SecuritySoftware relies on a database of
  This database is constructed with several tables.
  There's a table for each step, a table containing issues and a table containing
  solutions.
- SecuritySoftware then creates an SQL request containing 1 client and 1
- feature.
+ SecuritySoftware then creates an SQL request containing either a client,
+ a feature, a server or 1 client and 1 feature.
  (An example would be (pseudocode): select from issue where client=client
  & feature=feature) Then it would fetch all corresponding solutions to this
  issue.
@@ -1270,7 +1290,22 @@ Clients:
 First, we look at the clients and see if there's any matches with the issue
  table.
  There's no known issues with either iOS clients right now, but Android
- 4.4 KitKat has a Java-issue where ASyncTask can be intercepted by outsiders.
+ 4.4 KitKat has a Java-issue where 
+\begin_inset Quotes eld
+\end_inset
+
+ASyncTask
+\begin_inset Quotes erd
+\end_inset
+
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "ASyncTask"
+
+\end_inset
+
+ can be intercepted by outsiders.
  Solution to this is to use a different means of communication when creating
  the Android application, namely the 
 \begin_inset Quotes eld
@@ -1278,6 +1313,13 @@ First, we look at the clients and see if there's any matches with the issue
 
 Service
 \begin_inset Quotes erd
+\end_inset
+
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Service"
+
 \end_inset
 
  class.
@@ -1697,15 +1739,15 @@ Final Thoughts
 \end_layout
 
 \begin_layout Standard
-SecuritySoftware's goal is to become part of the planning process of software
- development.
+SecuritySoftware's goal is to become a core part of the planning process
+ of software development.
  The process has to be as smooth and easy as possible, while maintaining
- good results that are relevant today.
+ results that are relevant as the market changes.
  Problems can arise when SecuritySoftware tries to match clients with features
  or servers when trying to find issues.
  As development begins, these problems will be more clear and possible changes
- to how the analysis work will most likely happen.
- But in the end, the core idea will remain the same.
+ to how the analysis work are likelyto happen.
+ But in the end, the idea will remain the same.
 \end_layout
 
 \begin_layout Standard
@@ -1724,28 +1766,100 @@ In the end, SecuritySoftware will be an interesting project that will most
  software upon.
 \end_layout
 
+\begin_layout Standard
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
 \begin_layout Section
-References
+Table List
 \end_layout
 
 \begin_layout Standard
-http://docs.oracle.com/javaee/6/api/javax/xml/ws/Service.html
+\begin_inset FloatList table
+
+\end_inset
+
+
 \end_layout
 
-\begin_layout Standard
-http://developer.android.com/reference/android/os/AsyncTask.html
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "Avast"
+
+\end_inset
+
+Avast.com AVAST 2014 | Last ned gratis antivirusprogramvare for virusbeskyttelse
+ In-text: (Avast.com, 2014) Bibliography: Avast.com, (2014).
+ AVAST 2014 | Last ned gratis antivirusprogramvare for virusbeskyttelse.
+ [online] Available at: http://www.avast.com/no-no/ [Accessed 16 May.
+ 2014].
 \end_layout
 
-\begin_layout Standard
-http://no.norton.com/
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "ASyncTask"
+
+\end_inset
+
+WebsiteAsyncTask | Android Developers Developer.android.com AsyncTask | Android
+ Developers In-text: (Developer.android.com, 1918) Bibliography: Developer.android.c
+om, (1918).
+ AsyncTask | Android Developers.
+ [online] Available at: http://developer.android.com/reference/android/os/AsyncTas
+k.html [Accessed 16 May.
+ 2014].
 \end_layout
 
-\begin_layout Standard
-http://www.avast.com/no-no/
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "Service"
+
+\end_inset
+
+WebsiteService (Java EE 6 ) Docs.oracle.com Service (Java EE 6 ) In-text:
+ (Docs.oracle.com, 2009) Bibliography: Docs.oracle.com, (2009).
+ Service (Java EE 6 ).
+ [online] Available at: http://docs.oracle.com/javaee/6/api/javax/xml/ws/Service.ht
+ml [Accessed 16 May.
+ 2014].
 \end_layout
 
-\begin_layout Standard
-http://www.mcafee.com/no/
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "McAfee"
+
+\end_inset
+
+WebsiteMcAfee—Antivirus, Encryption, DLP, IPS, Firewall, Email Security,
+ Web Security, SaaS, Risk & Compliance Solutions Mcafee.com McAfee—Antivirus,
+ Encryption, DLP, IPS, Firewall, Email Security, Web Security, SaaS, Risk
+ & Compliance Solutions In-text: (Mcafee.com, 2014) Bibliography: Mcafee.com,
+ (2014).
+ McAfee—Antivirus, Encryption, DLP, IPS, Firewall, Email Security, Web Security,
+ SaaS, Risk & Compliance Solutions.
+ [online] Available at: http://www.mcafee.com/no/ [Accessed 16 May.
+ 2014].
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "Norton"
+
+\end_inset
+
+Website No.norton.com Norton: antivirus & anti spyware & backup In-text: (No.norton.
+com, 2014) Bibliography: No.norton.com, (2014).
+ Norton: antivirus & anti spyware & backup.
+ [online] Available at: http://no.norton.com/ [Accessed 16 May.
+ 2014].
 \end_layout
 
 \end_body

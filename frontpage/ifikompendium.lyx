@@ -1,9 +1,10 @@
-#LyX file created by tex2lyx 2.0.6
+#LyX 2.0 created this file. For more info see http://www.lyx.org/
 \lyxformat 413
 \begin_document
 \begin_header
 \textclass article
 \use_default_options false
+\maintain_unincluded_children false
 \language english
 \language_package none
 \inputencoding auto
@@ -17,12 +18,15 @@
 \font_osf false
 \font_sf_scale 100
 \font_tt_scale 100
+
 \graphics default
 \default_output_format default
 \output_sync 0
+\bibtex_command default
+\index_command default
 \paperfontsize default
 \spacing single
-\use_hyperref 0
+\use_hyperref false
 \papersize default
 \use_geometry false
 \use_amsmath 1
@@ -35,6 +39,10 @@
 \paperorientation portrait
 \suppress_date false
 \use_refstyle 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
 \secnumdepth 3
 \tocdepth 3
 \paragraph_separation indent
@@ -53,18 +61,15 @@
 \begin_body
 
 \begin_layout Standard
-
-
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 %% Standard headers:
 \end_layout
 
-\begin_layout Standard
-
+\begin_layout Plain Layout
 
 \end_layout
 
@@ -74,12 +79,10 @@ status collapsed
 \end_layout
 
 \begin_layout Standard
-
-
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 
 \backslash
@@ -92,131 +95,7 @@ DeclareOption
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
-
-{
-\end_layout
-
-\end_inset
-
-american
-\begin_inset ERT
-status collapsed
-
-\begin_layout Standard
-
-}
-\end_layout
-
-\end_inset
-
-
-\begin_inset ERT
-status collapsed
-
-\begin_layout Standard
-
-{
-\end_layout
-
-\end_inset
-
-
-\begin_inset FormulaMacro
-\def\IfiF@lang {eng}
-\end_inset
-
-
-\begin_inset ERT
-status collapsed
-
-\begin_layout Standard
-
-}
-\end_layout
-
-\end_inset
-
- 
-\begin_inset ERT
-status collapsed
-
-\begin_layout Standard
-
-
-\backslash
-DeclareOption
-\end_layout
-
-\end_inset
-
-
-\begin_inset ERT
-status collapsed
-
-\begin_layout Standard
-
-{
-\end_layout
-
-\end_inset
-
-english
-\begin_inset ERT
-status collapsed
-
-\begin_layout Standard
-
-}
-\end_layout
-
-\end_inset
-
-
-\begin_inset ERT
-status collapsed
-
-\begin_layout Standard
-
-{
-\end_layout
-
-\end_inset
-
-
-\begin_inset FormulaMacro
-\def\IfiF@lang {eng}
-\end_inset
-
-
-\begin_inset ERT
-status collapsed
-
-\begin_layout Standard
-
-}
-\end_layout
-
-\end_inset
-
- 
-\begin_inset ERT
-status collapsed
-
-\begin_layout Standard
-
-
-\backslash
-DeclareOption
-\end_layout
-
-\end_inset
-
-
-\begin_inset ERT
-status collapsed
-
-\begin_layout Standard
+\begin_layout Plain Layout
 
 {
 \end_layout
@@ -227,7 +106,7 @@ UKenglish
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 }
 \end_layout
@@ -238,7 +117,7 @@ status collapsed
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 {
 \end_layout
@@ -247,200 +126,14 @@ status collapsed
 
 
 \begin_inset FormulaMacro
-\def\IfiF@lang {eng}
+\renewcommand{\IfiF}[3]{eng}
 \end_inset
 
 
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
-
-}
-\end_layout
-
-\end_inset
-
- 
-\begin_inset ERT
-status collapsed
-
-\begin_layout Standard
-
-
-\backslash
-DeclareOption
-\end_layout
-
-\end_inset
-
-
-\begin_inset ERT
-status collapsed
-
-\begin_layout Standard
-
-{
-\end_layout
-
-\end_inset
-
-USenglish
-\begin_inset ERT
-status collapsed
-
-\begin_layout Standard
-
-}
-\end_layout
-
-\end_inset
-
-
-\begin_inset ERT
-status collapsed
-
-\begin_layout Standard
-
-{
-\end_layout
-
-\end_inset
-
-
-\begin_inset FormulaMacro
-\def\IfiF@lang {eng}
-\end_inset
-
-
-\begin_inset ERT
-status collapsed
-
-\begin_layout Standard
-
-}
-\end_layout
-
-\end_inset
-
- 
-\begin_inset ERT
-status collapsed
-
-\begin_layout Standard
-
-
-\backslash
-DeclareOption
-\end_layout
-
-\end_inset
-
-
-\begin_inset ERT
-status collapsed
-
-\begin_layout Standard
-
-{
-\end_layout
-
-\end_inset
-
-norsk
-\begin_inset ERT
-status collapsed
-
-\begin_layout Standard
-
-}
-\end_layout
-
-\end_inset
-
-
-\begin_inset ERT
-status collapsed
-
-\begin_layout Standard
-
-{
-\end_layout
-
-\end_inset
-
-
-\begin_inset FormulaMacro
-\def\IfiF@lang {bm}
-\end_inset
-
-
-\begin_inset ERT
-status collapsed
-
-\begin_layout Standard
-
-}
-\end_layout
-
-\end_inset
-
- 
-\begin_inset ERT
-status collapsed
-
-\begin_layout Standard
-
-
-\backslash
-DeclareOption
-\end_layout
-
-\end_inset
-
-
-\begin_inset ERT
-status collapsed
-
-\begin_layout Standard
-
-{
-\end_layout
-
-\end_inset
-
-nynorsk
-\begin_inset ERT
-status collapsed
-
-\begin_layout Standard
-
-}
-\end_layout
-
-\end_inset
-
-
-\begin_inset ERT
-status collapsed
-
-\begin_layout Standard
-
-{
-\end_layout
-
-\end_inset
-
-
-\begin_inset FormulaMacro
-\def\IfiF@lang {nn}
-\end_inset
-
-
-\begin_inset ERT
-status collapsed
-
-\begin_layout Standard
+\begin_layout Plain Layout
 
 }
 \end_layout
@@ -451,84 +144,15 @@ status collapsed
 \end_layout
 
 \begin_layout Standard
-
-
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
-
-
-\backslash
-ExecuteOptions
-\end_layout
-
-\end_inset
-
-
-\begin_inset ERT
-status collapsed
-
-\begin_layout Standard
-
-{
-\end_layout
-
-\end_inset
-
-norsk
-\begin_inset ERT
-status collapsed
-
-\begin_layout Standard
-
-}
-\end_layout
-
-\end_inset
-
- 
-\begin_inset ERT
-status collapsed
-
-\begin_layout Standard
-
-
-\backslash
-ProcessOptions
-\end_layout
-
-\end_inset
-
- 
-\begin_inset ERT
-status collapsed
-
-\begin_layout Standard
-
-
-\backslash
-relax
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-
-
-\begin_inset ERT
-status collapsed
-
-\begin_layout Standard
+\begin_layout Plain Layout
 
 %% Initial code:
 \end_layout
 
-\begin_layout Standard
-
+\begin_layout Plain Layout
 
 \end_layout
 
@@ -538,12 +162,10 @@ status collapsed
 \end_layout
 
 \begin_layout Standard
-
-
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 
 \backslash
@@ -556,7 +178,7 @@ RequirePackage
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 {
 \end_layout
@@ -567,7 +189,7 @@ fontenc
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 }
 \end_layout
@@ -578,7 +200,7 @@ status collapsed
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 
 \backslash
@@ -591,7 +213,7 @@ RequirePackage
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 {
 \end_layout
@@ -602,7 +224,7 @@ eso-pic,graphicx,keyval,xifthen
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 }
 \end_layout
@@ -613,7 +235,7 @@ status collapsed
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 
 \backslash
@@ -626,7 +248,7 @@ IfFileExists
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 {
 \end_layout
@@ -637,7 +259,7 @@ type1cm.sty
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 }
 \end_layout
@@ -648,7 +270,7 @@ status collapsed
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 {
 \end_layout
@@ -659,7 +281,7 @@ status collapsed
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 
 \backslash
@@ -672,7 +294,7 @@ RequirePackage
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 {
 \end_layout
@@ -683,7 +305,7 @@ type1cm
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 }
 \end_layout
@@ -694,7 +316,7 @@ status collapsed
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 }
 \end_layout
@@ -705,7 +327,7 @@ status collapsed
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 {}
 \end_layout
@@ -716,7 +338,7 @@ status collapsed
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 
 \backslash
@@ -729,7 +351,7 @@ IfFileExists
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 {
 \end_layout
@@ -740,7 +362,7 @@ type1ec.sty
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 }
 \end_layout
@@ -751,7 +373,7 @@ status collapsed
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 {
 \end_layout
@@ -762,7 +384,7 @@ status collapsed
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 
 \backslash
@@ -775,7 +397,7 @@ RequirePackage
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 {
 \end_layout
@@ -786,7 +408,7 @@ type1ec
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 }
 \end_layout
@@ -797,7 +419,7 @@ status collapsed
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 }
 \end_layout
@@ -808,7 +430,7 @@ status collapsed
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 {}
 \end_layout
@@ -819,18 +441,15 @@ status collapsed
 \end_layout
 
 \begin_layout Standard
-
-
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 %% The main command:
 \end_layout
 
-\begin_layout Standard
-
+\begin_layout Plain Layout
 
 \end_layout
 
@@ -840,38 +459,23 @@ status collapsed
 \end_layout
 
 \begin_layout Standard
-
-
 \begin_inset FormulaMacro
-\newcommand{\ififorside}[1][]{\begin{titlepage}
-    \def \and {, }
-    \setkeys{IfiF@keys}{#1}
-    \AddToShipoutPictureBG*{\IfiF@print@background}
-    \ifthenelse{\equal{}{\IfiF@dept}}
-      {}
-      {\AddToShipoutPictureFG*{\IfiF@print@dept}}
-    \AddToShipoutPictureFG*{\IfiF@print@title}
-    \null
-  \end{titlepage}
-  \if@twoside \IfiF@blankpage \fi}
+\renewcommand{\ififorside}[1][]{\begin{titlepage} \newcommand{\and}{, }\setkeys{IfiF@keys}{#1} \AddToShipoutPictureBG*{\IfiF @print@background} \ifthenelse{\equal{}{\IfiF @dept}} {} {\AddToShipoutPictureFG*{\IfiF @print@dept}} \AddToShipoutPictureFG*{\IfiF @print@title} \null\end{titlepage} \if@twoside \IfiF @blankpage \fi}
 \end_inset
 
 
 \end_layout
 
 \begin_layout Standard
-
-
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 %% The options:
 \end_layout
 
-\begin_layout Standard
-
+\begin_layout Plain Layout
 
 \end_layout
 
@@ -881,12 +485,10 @@ status collapsed
 \end_layout
 
 \begin_layout Standard
-
-
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 
 \backslash
@@ -899,7 +501,7 @@ define@key
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 {
 \end_layout
@@ -910,7 +512,7 @@ IfiF@keys
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 }
 \end_layout
@@ -921,7 +523,7 @@ status collapsed
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 {
 \end_layout
@@ -932,7 +534,7 @@ dept
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 }
 \end_layout
@@ -943,7 +545,7 @@ status collapsed
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 {
 \end_layout
@@ -952,14 +554,14 @@ status collapsed
 
 
 \begin_inset FormulaMacro
-\def\IfiF@dept {#1}
+\renewcommand{\IfiF}[3]{#1}
 \end_inset
 
 
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 }
 \end_layout
@@ -970,7 +572,7 @@ status collapsed
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 
 \backslash
@@ -983,7 +585,7 @@ define@key
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 {
 \end_layout
@@ -994,7 +596,7 @@ IfiF@keys
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 }
 \end_layout
@@ -1005,7 +607,7 @@ status collapsed
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 {
 \end_layout
@@ -1016,7 +618,7 @@ fac
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 }
 \end_layout
@@ -1027,7 +629,7 @@ status collapsed
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 {
 \end_layout
@@ -1036,14 +638,14 @@ status collapsed
 
 
 \begin_inset FormulaMacro
-\def\IfiF@fac {#1}
+\renewcommand{\IfiF}[2]{#1}
 \end_inset
 
 
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 }
 \end_layout
@@ -1054,7 +656,7 @@ status collapsed
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 
 \backslash
@@ -1067,7 +669,7 @@ define@key
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 {
 \end_layout
@@ -1078,7 +680,7 @@ IfiF@keys
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 }
 \end_layout
@@ -1089,7 +691,7 @@ status collapsed
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 {
 \end_layout
@@ -1100,7 +702,7 @@ isbn
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 }
 \end_layout
@@ -1111,7 +713,7 @@ status collapsed
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 {
 \end_layout
@@ -1120,14 +722,14 @@ status collapsed
 
 
 \begin_inset FormulaMacro
-\def\IfiF@isbn {#1}
+\renewcommand{\IfiF}[3]{#1}
 \end_inset
 
 
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 }
 \end_layout
@@ -1138,7 +740,7 @@ status collapsed
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 
 \backslash
@@ -1151,7 +753,7 @@ define@key
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 {
 \end_layout
@@ -1162,7 +764,7 @@ IfiF@keys
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 }
 \end_layout
@@ -1173,7 +775,7 @@ status collapsed
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 {
 \end_layout
@@ -1184,7 +786,7 @@ issn
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 }
 \end_layout
@@ -1195,7 +797,7 @@ status collapsed
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 {
 \end_layout
@@ -1204,14 +806,14 @@ status collapsed
 
 
 \begin_inset FormulaMacro
-\def\IfiF@issn {#1}
+\renewcommand{\IfiF}[3]{#1}
 \end_inset
 
 
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 }
 \end_layout
@@ -1222,7 +824,7 @@ status collapsed
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 
 \backslash
@@ -1235,7 +837,7 @@ define@key
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 {
 \end_layout
@@ -1246,7 +848,7 @@ IfiF@keys
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 }
 \end_layout
@@ -1257,7 +859,7 @@ status collapsed
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 {
 \end_layout
@@ -1268,7 +870,7 @@ n
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 }
 \end_layout
@@ -1279,7 +881,7 @@ status collapsed
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 {
 \end_layout
@@ -1288,14 +890,14 @@ status collapsed
 
 
 \begin_inset FormulaMacro
-\def\IfiF@rrnum {#1}
+\renewcommand{\IfiF}[3]{#1}
 \end_inset
 
 
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 }
 \end_layout
@@ -1306,48 +908,43 @@ status collapsed
 \end_layout
 
 \begin_layout Standard
-
-
 \begin_inset FormulaMacro
-\def\IfiF@dept {}
+\renewcommand{\IfiF}[3]{}
 \end_inset
 
  
 \begin_inset FormulaMacro
-\def\IfiF@fac {}
+\renewcommand{\IfiF}[2]{}
 \end_inset
 
  
 \begin_inset FormulaMacro
-\def\IfiF@isbn {}
+\renewcommand{\IfiF}[3]{}
 \end_inset
 
  
 \begin_inset FormulaMacro
-\def\IfiF@issn {0806-3036}
+\renewcommand{\IfiF}[3]{0806-3036}
 \end_inset
 
  
 \begin_inset FormulaMacro
-\def\IfiF@rrnum {0}
+\renewcommand{\IfiF}[3]{0}
 \end_inset
 
 
 \end_layout
 
 \begin_layout Standard
-
-
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 %% Additional commands:
 \end_layout
 
-\begin_layout Standard
-
+\begin_layout Plain Layout
 
 \end_layout
 
@@ -1357,17 +954,15 @@ status collapsed
 \end_layout
 
 \begin_layout Standard
-
-
 \begin_inset FormulaMacro
-\newcommand{\subtitle}[1]{\def \IfiF@subtitle{#1}}
+\renewcommand{\subtitle}[1]{\renewcommand{\IfiF}[4]{#1}}
 \end_inset
 
  
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 
 \backslash
@@ -1380,7 +975,7 @@ subtitle{
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 }
 \end_layout
@@ -1391,18 +986,15 @@ status collapsed
 \end_layout
 
 \begin_layout Standard
-
-
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 %% Include the title page background:
 \end_layout
 
-\begin_layout Standard
-
+\begin_layout Plain Layout
 
 \end_layout
 
@@ -1412,37 +1004,23 @@ status collapsed
 \end_layout
 
 \begin_layout Standard
-
-
 \begin_inset FormulaMacro
-\newcommand{\IfiF@print@background}{{%
-  \setlength{\unitlength}{1bp}%
-  \ifthenelse{\equal{}{\IfiF@dept}}
-    {\put(-21,-21){\includegraphics{ifi-\IfiF@background-forside-\IfiF@lang}}}
-    {\put(0,0){%
-        \parbox[b][\paperheight]{\paperwidth}{%
-          \vfill
-          \centering
-          \includegraphics{uio-\IfiF@background-forside}%
-          \vfill}}}}}
+\newcommand{\}{}
 \end_inset
 
 
 \end_layout
 
 \begin_layout Standard
-
-
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 %% Include the name of the university and department (if needed):
 \end_layout
 
-\begin_layout Standard
-
+\begin_layout Plain Layout
 
 \end_layout
 
@@ -1452,31 +1030,20 @@ status collapsed
 \end_layout
 
 \begin_layout Standard
-
-
 \begin_inset FormulaMacro
-\newcommand{\IfiF@print@dept}{{%
-    \setlength{\unitlength}{1cm}%
-    \put(3.9,22.6){\makebox[10cm][l]{\rm
-        \fontfamily{\IfiF@font}\fontseries{b}%
-        \fontsize{24}{0pt}\selectfont
-        \IfiF@dept}}
-    \put(3.9,21.9){\makebox[10cm][l]{\rm              % Should have been Questor
-        \fontfamily{pnc}\fontsize{17}{0pt}\selectfont % but New Cent Schb looks
-        \IfiF@fac}}}}
+\newcommand{\}{}
 \end_inset
 
  
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 % quite like it.
 \end_layout
 
-\begin_layout Standard
-
+\begin_layout Plain Layout
 
 \end_layout
 
@@ -1486,18 +1053,15 @@ status collapsed
 \end_layout
 
 \begin_layout Standard
-
-
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 %% Include the title, subtitle, author and date:
 \end_layout
 
-\begin_layout Standard
-
+\begin_layout Plain Layout
 
 \end_layout
 
@@ -1507,70 +1071,23 @@ status collapsed
 \end_layout
 
 \begin_layout Standard
-
-
 \begin_inset FormulaMacro
-\newcommand{\IfiF@print@title}{{%
-  \setlength{\unitlength}{1cm}%
-  \put(3.5,14.6){\vbox to 6.1cm {\hsize=15.5cm
-    \raggedright
-    %
-    \ifthenelse{\isundefined{\fveLaTeX}}{}
-    { % Redefinition of standard \LaTeX command because font package
-      % 'bera' mangles it!
-      \DeclareRobustCommand{\ifik@LaTeX}{L\kern-.36em%
-       {\sbox\z@ T%
-         \vbox to\ht\z@{\hbox{\check@mathfonts
-                              \fontsize\sf@size\z@
-                              \math@fontsfalse\selectfont
-                              A}%
-                        \vss}%
-        }%
-        \kern-.15em%
-        \TeX}%
-      \let \LaTeX = \ifik@LaTeX
-    }
-    %
-    \fontfamily{\IfiF@font}
-    \fontsize{32}{35pt}\selectfont 
-    \@title
-
-    \vskip 0pt plus 1fill
-    \fontsize{17}{20pt}\selectfont 
-    \ifthenelse{\cnttest{\IfiF@rrnum}={0}}{\IfiF@subtitle}{Research Report \IfiF@rrnum}
-
-    \vskip 0pt plus 2fill
-    \@author\\[0.5ex] \IfiF@kind}}%
-  \ifthenelse{\equal{\IfiF@isbn}{}}
-    {}
-    {\put(3.5,11.2){\vbox to 2.8cm {\hsize=15.5cm
-     \raggedright
-     \vfill
-     \fontfamily{\IfiF@font}
-     \fontsize{17}{20pt}\selectfont
-     \begin{tabular}{@{}ll}
-       ISBN& \IfiF@isbn\\[0.5ex]
-       ISSN& \IfiF@issn\\
-     \end{tabular}
-     \vfill}}}}}
+\newcommand{\}{}
 \end_inset
 
 
 \end_layout
 
 \begin_layout Standard
-
-
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 %% Find the best font:
 \end_layout
 
-\begin_layout Standard
-
+\begin_layout Plain Layout
 
 \end_layout
 
@@ -1580,23 +1097,20 @@ status collapsed
 \end_layout
 
 \begin_layout Standard
-
-
 \begin_inset FormulaMacro
-\newcommand{\IfiF@font}{phv}
+\newcommand{\}{}
 \end_inset
 
  
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 % Helvetica is always available, but use
 \end_layout
 
-\begin_layout Standard
-
+\begin_layout Plain Layout
 
 \end_layout
 
@@ -1606,7 +1120,7 @@ status collapsed
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 
 \backslash
@@ -1619,7 +1133,7 @@ IfFileExists
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 {
 \end_layout
@@ -1630,7 +1144,7 @@ t1ua1.fd
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 }
 \end_layout
@@ -1641,7 +1155,7 @@ status collapsed
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 {
 \end_layout
@@ -1650,14 +1164,14 @@ status collapsed
 
 
 \begin_inset FormulaMacro
-\renewcommand{\IfiF@font}{ua1}
+\newcommand{\}{}
 \end_inset
 
 
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 }
 \end_layout
@@ -1668,7 +1182,7 @@ status collapsed
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 {}
 \end_layout
@@ -1679,13 +1193,12 @@ status collapsed
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 % Arial if possible.
 \end_layout
 
-\begin_layout Standard
-
+\begin_layout Plain Layout
 
 \end_layout
 
@@ -1695,18 +1208,15 @@ status collapsed
 \end_layout
 
 \begin_layout Standard
-
-
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 %% Determine the term (as in "Spring 2012"):
 \end_layout
 
-\begin_layout Standard
-
+\begin_layout Plain Layout
 
 \end_layout
 
@@ -1716,12 +1226,10 @@ status collapsed
 \end_layout
 
 \begin_layout Standard
-
-
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 
 \backslash
@@ -1734,7 +1242,7 @@ newcounter{IfiF@cur@year}
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 
 \backslash
@@ -1751,7 +1259,7 @@ year}
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 
 \backslash
@@ -1764,7 +1272,7 @@ newcounter{IfiF@cur@month}
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 
 \backslash
@@ -1781,12 +1289,10 @@ month}
 \end_layout
 
 \begin_layout Standard
-
-
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 
 \backslash
@@ -1799,7 +1305,7 @@ ifthenelse
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 {
 \end_layout
@@ -1810,7 +1316,7 @@ status collapsed
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 
 \backslash
@@ -1823,7 +1329,7 @@ theIfiF@cur@month
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 }
 \end_layout
@@ -1834,7 +1340,7 @@ status collapsed
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 {
 \end_layout
@@ -1843,24 +1349,24 @@ status collapsed
 
 
 \begin_inset FormulaMacro
-\newcommand{\IfiF@term@eng}{Spring}
+\newcommand{\}{}
 \end_inset
 
 
 \begin_inset FormulaMacro
-\newcommand{\IfiF@term@bm}{v\aa ren}
+\newcommand{\}{}
 \end_inset
 
 
 \begin_inset FormulaMacro
-\newcommand{\IfiF@term@nn}{v\aa ren}
+\newcommand{\}{}
 \end_inset
 
 
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 }
 \end_layout
@@ -1871,7 +1377,7 @@ status collapsed
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 {
 \end_layout
@@ -1880,24 +1386,24 @@ status collapsed
 
 
 \begin_inset FormulaMacro
-\newcommand{\IfiF@term@eng}{Autumn}
+\newcommand{\}{}
 \end_inset
 
 
 \begin_inset FormulaMacro
-\newcommand{\IfiF@term@bm}{h\o sten}
+\newcommand{\}{}
 \end_inset
 
 
 \begin_inset FormulaMacro
-\newcommand{\IfiF@term@nn}{hausten}
+\newcommand{\}{}
 \end_inset
 
 
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 }
 \end_layout
@@ -1906,30 +1412,27 @@ status collapsed
 
  
 \begin_inset FormulaMacro
-\newcommand{\IfiF@term}{\csname IfiF@term@\IfiF@lang\endcsname}
+\newcommand{\}{}
 \end_inset
 
  
 \begin_inset FormulaMacro
-\newcommand{\IfiF@year}{\arabic{IfiF@cur@year}}
+\newcommand{\}{}
 \end_inset
 
 
 \end_layout
 
 \begin_layout Standard
-
-
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 %% Other utilities:
 \end_layout
 
-\begin_layout Standard
-
+\begin_layout Plain Layout
 
 \end_layout
 
@@ -1939,25 +1442,18 @@ status collapsed
 \end_layout
 
 \begin_layout Standard
-
-
 \begin_inset FormulaMacro
-\newcommand{\IfiF@blankpage}{%
-    \thispagestyle{empty}
-    \null
-    \newpage}
+\newcommand{\}{}
 \end_inset
 
 
 \end_layout
 
 \begin_layout Standard
-
-
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 
 \backslash

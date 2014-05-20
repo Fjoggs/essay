@@ -72,6 +72,24 @@ LatexCommand tableofcontents
 \end_inset
 
 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset FloatList table
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
 \begin_inset Newpage newpage
 \end_inset
 
@@ -83,7 +101,7 @@ Introduction
 \end_layout
 
 \begin_layout Standard
-Software development has evolved from something you'd do in your garage
+Software development has evolved from something that is done in your garage
  after work, to the backbone of society.
  This growth has spawned numerous companies, and in turn increased the need
  for structure, planning and working methods that can provide results, regardles
@@ -141,9 +159,9 @@ Thesis Statement
 \end_layout
 
 \begin_layout Standard
-In light of the background information, how can we best design an application,
- hereby referred to as SecuritySoftware, to solve the needs we've highlighted
- so far? In short, our application has to answer the statement: 
+How can we best design an application, hereby referred to as SecuritySoftware,
+ to solve the needs we've highlighted so far? In short, our application
+ has to answer the statement: 
 \shape italic
 how can we create an application that would highlight security issues early
  in the planning phase, and integrate this as good as possible with already
@@ -1114,7 +1132,7 @@ X
 \begin_inset Caption
 
 \begin_layout Plain Layout
-Feature Information
+Step 2 - Feature Information
 \end_layout
 
 \end_inset
@@ -1258,7 +1276,7 @@ Stores information
 \begin_inset Caption
 
 \begin_layout Plain Layout
-Server Information
+Step 3 - Server Information
 \end_layout
 
 \end_inset
@@ -1686,7 +1704,7 @@ N/A
 \begin_inset Caption
 
 \begin_layout Plain Layout
-Client & feature analysis
+Final Step - Client & feature analysis
 \end_layout
 
 \end_inset
@@ -1764,25 +1782,6 @@ Additional features that might be relevant would be to include what programming
 In the end, SecuritySoftware will be an interesting project that will most
  likely serve as a prototype for future programs, or an idea to base new
  software upon.
-\end_layout
-
-\begin_layout Standard
-\begin_inset Newpage newpage
-\end_inset
-
-
-\end_layout
-
-\begin_layout Section
-Table List
-\end_layout
-
-\begin_layout Standard
-\begin_inset FloatList table
-
-\end_inset
-
-
 \end_layout
 
 \begin_layout Bibliography

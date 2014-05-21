@@ -215,27 +215,43 @@ How can we best implement an application to fit the current planning processes
 \end_layout
 
 \begin_layout Subsection
-Success Criterias
+Success Criteria
 \end_layout
 
 \begin_layout Subsubsection
-General Criterias
+Goal Statement
 \end_layout
 
 \begin_layout Standard
-In order to best realize our goal, we need to set some criterias for success;
+The goal for SecuritySoftware is to provide developers with a tool to help
+ plan for features that are secure against external threats like attacks
+ through security holes, viruses and poor programming solutions (an example
+ would be using Statements 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Statement"
+
+\end_inset
+
+ instead of PreparedStatement 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "PreparedStatement"
+
+\end_inset
+
+).
+\end_layout
+
+\begin_layout Subsubsection
+General Criteria
+\end_layout
+
+\begin_layout Standard
+In order to best realize our goal, we need to set some criteria for success;
  what do we define as a success, and how can we achieve it.
  For software developers, important functions for an application is responsivene
-ss, cross-platform support and easy to use.
- These are all general sucess criterias that are 
-\begin_inset Quotes eld
-\end_inset
-
-self-explanatory
-\begin_inset Quotes erd
-\end_inset
-
-.
+ss, cross-platform support and ease of use.
  Responsiveness is important, because when you're developing software, you
  do not want to be slowed down because the applications you are using is
  not working fluently, or keeping up with your speed.
@@ -251,12 +267,10 @@ Mac's
  to develop software, but there's also a large userbase that works on Linux.
  Windows also have a large userbase, and supporting them is pretty much
  mandatory and this day and age.
- Easy to use is subjective, but SecuritySoftware shouldn't require any form
- of extensive programming knowledge or certifications in security.
 \end_layout
 
 \begin_layout Subsubsection
-SecuritySoftware Specific Criterias
+SecuritySoftware Specific Criteria
 \end_layout
 
 \begin_layout Standard
@@ -270,8 +284,8 @@ For SecuritySoftware to be considered a success, the following criterias
 \begin_inset Quotes eld
 \end_inset
 
-SecuritySoftware's database has to be easily updated for the software to
- stay relevant.
+The database of SecuritySoftware has to be easily updated for the software
+ to stay relevant.
 \begin_inset Quotes erd
 \end_inset
 
@@ -297,22 +311,27 @@ System breakdown
 \end_layout
 
 \begin_layout Standard
-SecuritySoftware's two main components is the progam itself, and a database
+SecuritySoftwares two main components are the progam itself, and a database
  containing all the information regarding security issues and their correspondin
-g solution.
- (Or lack thereof) The database will be located online, meaning SecuritySoftware
- will not be useful to someone without internet access.
+g solution (or lack thereof).
+ The database will be located online, meaning SecuritySoftware will not
+ be useful to someone without internet access.
  Possible feature to allow a user to download the database locally is a
  potential fix for this, but considering how often issues are discovered
  and how quick fixes for this can be discovered, this is a sub-par solution.
+ What if a proposed solution already has been dated, and found not good
+ enough? Users working offline would not be aware of this if the database
+ is not updated regulary.
  In this day and age, it's almost impossible to develop software without
  an internet connection.
+ Troubleshooting, version control and downloading dependencies are all done
+ online.
  Therefore, requiring an internet connection should not be a big problem.
 \end_layout
 
 \begin_layout Standard
-SecuritySoftware will consist of 4 different steps, each one dependant on
- the one beforehand.
+Use of SecuritySoftware will involve 4 different steps, each one dependant
+ on the one before it.
  (apart from step 1) The user will be guided through each step, and if needed,
  can jump back to a previous step to change, add or remove information.
  
@@ -1155,7 +1174,7 @@ We've reached the step where we list how the client and server will communicate
  When a client wants to log in to HospitalApplication, he'll enter his credentia
 ls.
  This will then be sent to the server, which will ask the database if the
- given credentials match any in the database.
+ given credentials match any of the entries found in the database.
 \end_layout
 
 \begin_layout Standard
@@ -1741,8 +1760,8 @@ Clients and features combined:
 \begin_layout Standard
 We've now completed the individual steps for client and feature, but we
  also need to check combinations of these.
- Maybe there's special conditions where authentication on iOS-devices are
- more vulnerable than Android? All combinations will therefore be checked.
+ Maybe there are special conditions where authentication on iOS-devices
+ are more vulnerable than Android? All combinations will therefore be checked.
  
 \end_layout
 
@@ -1764,8 +1783,8 @@ SecuritySoftware's goal is to become a core part of the planning process
  Problems can arise when SecuritySoftware tries to match clients with features
  or servers when trying to find issues.
  As development begins, these problems will be more clear and possible changes
- to how the analysis work are likelyto happen.
- But in the end, the idea will remain the same.
+ to how the analysis work is likely to happen.
+ But in the end, the idea remains the same.
 \end_layout
 
 \begin_layout Standard
@@ -1774,8 +1793,7 @@ Additional features that might be relevant would be to include what programming
  about the features you want to include.
  Should a specific feature require log in? Can anyone see it? Only accessable
  for certain users? These are all questions that are relevant to development,
- and will hopefully find it's way into SecuritySoftwares knowledge database
- in some way or the other.
+ and will hopefully find it's way into SecuritySoftwares knowledge database.
 \end_layout
 
 \begin_layout Standard
@@ -1858,6 +1876,37 @@ Website No.norton.com Norton: antivirus & anti spyware & backup In-text: (No.nor
 com, 2014) Bibliography: No.norton.com, (2014).
  Norton: antivirus & anti spyware & backup.
  [online] Available at: http://no.norton.com/ [Accessed 16 May.
+ 2014].
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "PreparedStatement"
+
+\end_inset
+
+PreparedStatement (Java Platform SE 7 ) Docs.oracle.com PreparedStatement
+ (Java Platform SE 7 ) In-text: (Docs.oracle.com, 1993) Bibliography: Docs.oracle.co
+m, (1993).
+ PreparedStatement (Java Platform SE 7 ).
+ [online] Available at: http://docs.oracle.com/javase/7/docs/api/java/sql/Prepared
+Statement.html [Accessed 21 May.
+ 2014].
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "Statement"
+
+\end_inset
+
+Docs.oracle.com Statement (Java Platform SE 7 ) In-text: (Docs.oracle.com, 1993)
+ Bibliography: Docs.oracle.com, (1993).
+ Statement (Java Platform SE 7 ).
+ [online] Available at: http://docs.oracle.com/javase/7/docs/api/java/sql/Statemen
+t.html [Accessed 21 May.
  2014].
 \end_layout
 

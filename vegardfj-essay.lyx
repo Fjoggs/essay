@@ -326,14 +326,33 @@ g solution (or lack thereof).
  an internet connection.
  Troubleshooting, version control and downloading dependencies are all done
  online.
- Therefore, requiring an internet connection should not be a big problem.
+ Version control is perhaps one of the most important aspects of development
+ these days, as multiple people can work on the same files without having
+ to worry about removing or changing their contributions.
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Version Control"
+
+\end_inset
+
+ GitHub, one of the largest websites related to development, have over 6
+ million people using their version control repositories.
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Github"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
 Use of SecuritySoftware will involve 4 different steps, each one dependant
- on the one before it.
- (apart from step 1) The user will be guided through each step, and if needed,
- can jump back to a previous step to change, add or remove information.
+ on the one before it (apart from step 1).
+ The user will be guided through each step, and if needed, can jump back
+ to a previous step to change, add or remove information.
  
 \end_layout
 
@@ -342,10 +361,10 @@ Step By Step Explanation
 \end_layout
 
 \begin_layout Standard
-Below we'll list the rundown of each step you'll encounter when running
- SecuritySoftware, and what you need to do to complete each one.
- If you need to, SecuritySoftware will allow you to go back to a previous
- step if changes has to be made.
+Here's a rundown of each step encountered when running SecuritySoftware,
+ and what is needed to complete each one.
+ If needed, SecuritySoftware will allow backtracking to a previous step
+ if changes has to be made.
  This will then change the final analysis.
 \end_layout
 
@@ -372,12 +391,12 @@ Step 2 - Listing Features
 
 \begin_layout Standard
 The next step is perhaps the most crucial.
- For SecuritySoftware to be of any use, it needs to know what features you
- are planning to offer with your application.
- Without features, security wouldn't be an issue! Here the user will be
- presented with a search box, along with a list of commonly used features.
- The search box will be updated as you type, meaning if you're looking for
- authentication, it would show up while typing 
+ For SecuritySoftware to be of any use, it needs to know what features the
+ application will be providing.
+ Without features, security wouldn't be an issue! The user is presented
+ with a search box, along with a list of commonly used features.
+ The search box will be updated while you type, meaning if the application
+ offers a log in system, then it would show up while typing 
 \begin_inset Quotes eld
 \end_inset
 
@@ -385,7 +404,7 @@ auth
 \begin_inset Quotes erd
 \end_inset
 
-.
+ (short for authentication).
  Each feature will also be applied a 
 \begin_inset Quotes eld
 \end_inset
@@ -422,12 +441,13 @@ The last step SecuritySoftware needs from the user, is information on how
  the server side will look like.
  Smaller systems might not need a database to handle authentication, and
  the issues would therefore be different.
- When you add a server to this step, you'll be asked to list what this server
- will handle for each feature.
- If you have a database, and you want your users credentials to be stored
- on the database, then the user would list this after adding the database.
- This means that SecuritySoftware would know that your database contains
- highly sensitive information, and you need to safely store it in some way
+ When adding a server to this step, SecuritySoftware will ask what this
+ server will handle for each feature.
+ If there's a database, and the application wants user credentials stored
+ there, then the user of SecuritySoftware would list this after adding the
+ database.
+ This means that SecuritySoftware would know that the server database contains
+ highly sensitive information, and it has to be stored safely in some way
  in case of a security breach.
 \end_layout
 
@@ -436,19 +456,18 @@ Final Step - The Analysis
 \end_layout
 
 \begin_layout Standard
-Until now, SecuritySoftware hasn't really done anything.
- It's just asked the user to list the information about how the system is
- constructed.
+Until now, SecuritySoftware have not analysed anything.
+ The first 3 steps have asked the user to list the information about how
+ the system is constructed.
  The real meat of the application is when the analysis comes in.
  
 \end_layout
 
 \begin_layout Standard
-So how does the analysis work? SecuritySoftware relies on a database of
- information.
+SecuritySoftware relies on a database of information.
  This database is constructed with several tables.
- There's a table for each step, a table containing issues and a table containing
- solutions.
+ Each step has a seperate table, and there is a table containing issues
+ and a table containing solutions.
  SecuritySoftware then creates an SQL request containing either a client,
  a feature, a server or 1 client and 1 feature.
  (An example would be (pseudocode): select from issue where client=client
@@ -460,7 +479,15 @@ ver combination.
 
 \begin_layout Standard
 In short, SecuritySoftware will check all possible combinations, to see
- if there's a match in the Issue table with any of the 3 
+ if there is a match in the 
+\begin_inset Quotes eld
+\end_inset
+
+Issue
+\begin_inset Quotes erd
+\end_inset
+
+ table with any of the 3 
 \begin_inset Quotes eld
 \end_inset
 
@@ -716,9 +743,7 @@ Example Runthrough
 \end_layout
 
 \begin_layout Standard
-To show what a runthrough with SecuritySoftware would look like, we'll guide
- you through it step-by-step.
- The system is an information application to be used in hospitals, mainly
+The system is an information application to be used in hospitals, mainly
  targeting mobile operating systems, but also webbrowsers on PCs.
  It will support a chat system, letting you send instant messages to customer
  support if needed.
@@ -738,29 +763,26 @@ HospitalApplication is a system that will be run on both Android systems,
 \end_layout
 
 \begin_layout Standard
-We start with Apple first.
- Our software will run on mobile devices, both cellphones and tablets/pads.
- This means we'll choose iOS 7 from the list.
- Most of the time, you'll always choose the latest version of a client,
- but in some cases you might want to target phones that can't run the latest
- versions, meaning if you want to support more, you have to intentionally
- release it on lower versions.
- We would therefore list this aswell.
+The software will run on mobile devices, both cellphones and tablets/pads.
+ In order to support Apples latest devices, iOS 7 is selected from the list.
+ Most of the time, the latest version of a client is the correct choice,
+ but in cases where it is not supported, the possibility of adding older
+ versions are supported.
+ This would be listed as a seperate entry in the client table.
  
 \end_layout
 
 \begin_layout Standard
 Next up is Android.
- To make it easier to follow, we'll simply add support for the latest version,
- which is 4.4.2 KitKat.
- This will allow our application to run on both cellphones and tablets supported
+ The latest version is 4.4.2 KitKat, and is selected from the list.
+ This will allow the application to run on both cellphones and tablets supported
  by this version.
 \end_layout
 
 \begin_layout Standard
-Both Apple and Android have mobile web browsers, and because we're creating
- an application that's also accessable via web-browsers, we need to let
- SecuritySoftware know this by checking an option that says 
+Both Apple and Android have mobile web browsers, and because the application
+ is also accessable via web-browsers, SecuritySoftware needs to know this
+ by checking an option that says 
 \begin_inset Quotes eld
 \end_inset
 
@@ -772,7 +794,7 @@ Include mobile web-browsers
 \end_layout
 
 \begin_layout Standard
-Last we add support for web-browsers run from PCs.
+Last, support for web-browsers running on a PC is added.
  See Table 2 for an overview of what this would look like.
 \end_layout
 
@@ -976,20 +998,21 @@ Step 2 - Features
 \end_layout
 
 \begin_layout Standard
-Next up we need to list the features we want our program to support.
+Next up, the user of SecuritySoftware needs to list the features HospitalApplica
+tion wants to support.
  As explained earlier, the ones supported for analysis all exist within
  SecuritySoftware.
  Popular choices show up in a list.
  Authentication is almost standard these days for mobile applications, so
  it shows up in the list of most used features.
- HospitalApplication also supports instant messaging, and we want these
- conversations to be logged, so we need to add a feature for storing logs
- somewhere.
+ HospitalApplication also supports instant messaging and saving chat logs
+ to a remote server.
  When the user adds Instant Messaging to the list of features, SecuritySoftware
  will ask if the feature requires a user to be logged in.
- Because we want to log our chats, we need this to be set to true.
- The next step, we'll choose where to store our logs and how these features
- will communicate from the server and to the client.
+ HospitalApplication only allows logged in users to chat using the instant
+ messaging service.
+ The last feature is saving chat logs, and specifying wether or not this
+ should be accessible for anyone to read.
 \end_layout
 
 \begin_layout Standard
@@ -1169,8 +1192,7 @@ Step 3 - Server
 \end_layout
 
 \begin_layout Standard
-We've reached the step where we list how the client and server will communicate
- with each other for each feature.
+Step 3 shows how the client and server communicates for each feature.
  When a client wants to log in to HospitalApplication, he'll enter his credentia
 ls.
  This will then be sent to the server, which will ask the database if the
@@ -1315,8 +1337,9 @@ Final Step - Analysis
 \begin_layout Standard
 Now for the analysis, where SecuritySoftware finally does some work other
  than holding your own through the process.
- All issues and solutions proposed here are not real life situations, and
- are simply created for simulation purposes.
+ Please note that the issues and solutions highlighted in the analysis are
+ for demonstrational purposes, and do not exist.
+ 
 \end_layout
 
 \begin_layout Paragraph
@@ -1324,10 +1347,18 @@ Clients:
 \end_layout
 
 \begin_layout Standard
-First, we look at the clients and see if there's any matches with the issue
+Step one is looking at the clients and see if there are any matches with
+ the 
+\begin_inset Quotes eld
+\end_inset
+
+Issue
+\begin_inset Quotes erd
+\end_inset
+
  table.
- There's no known issues with either iOS clients right now, but Android
- 4.4 KitKat has a Java-issue where 
+ There are no known issues with iOS 7 or iOS 6 right now, but Android 4.4
+ KitKat has a Java-issue where 
 \begin_inset Quotes eld
 \end_inset
 
@@ -1743,14 +1774,14 @@ Final Step - Client & feature analysis
 \begin_layout Paragraph
 Servers: 
 \series medium
-Because some systems will use databases to contain their information, there
- might be need of an extra layer of security in between the server and the
- database.
+Because some systems will use databases to store information instead of
+ directly on a server, there might be need of an extra layer of security
+ in between the server and the database.
  This step in the analysis will provide that information, in correlation
  with the features.
- Chat log will be open for everyone in our HospitalApplication.
+ Chat logs will be open for everyone using HospitalApplication.
  It's therefore not needed to do anything special with these on our database,
- because you can read it anyway.
+ because all users can read it anyway.
 \end_layout
 
 \begin_layout Paragraph
@@ -1758,8 +1789,8 @@ Clients and features combined:
 \end_layout
 
 \begin_layout Standard
-We've now completed the individual steps for client and feature, but we
- also need to check combinations of these.
+SecuritySoftware have now completed the individual steps for client and
+ feature, but the software also needs to check combinations of these.
  Maybe there are special conditions where authentication on iOS-devices
  are more vulnerable than Android? All combinations will therefore be checked.
  
@@ -1768,7 +1799,7 @@ We've now completed the individual steps for client and feature, but we
 \begin_layout Standard
 When all these steps are completed, SecuritySoftware has finished analysing
  the application and the user can either change some of the information
- he provided earlier, or add the results to his potential software specification.
+ provided earlier, or add the results to a software specification.
 \end_layout
 
 \begin_layout Section
@@ -1776,21 +1807,21 @@ Final Thoughts
 \end_layout
 
 \begin_layout Standard
-SecuritySoftware's goal is to become a core part of the planning process
+SecuritySoftwares goal is to become a core part of the planning process
  of software development.
  The process has to be as smooth and easy as possible, while maintaining
  results that are relevant as the market changes.
  Problems can arise when SecuritySoftware tries to match clients with features
  or servers when trying to find issues.
  As development begins, these problems will be more clear and possible changes
- to how the analysis work is likely to happen.
+ to how the analysis works are likely to happen.
  But in the end, the idea remains the same.
 \end_layout
 
 \begin_layout Standard
 Additional features that might be relevant would be to include what programming
  language the system is to be implemented in, and increasing the information
- about the features you want to include.
+ about the features a user of SecuritySoftware want to include.
  Should a specific feature require log in? Can anyone see it? Only accessable
  for certain users? These are all questions that are relevant to development,
  and will hopefully find it's way into SecuritySoftwares knowledge database.
@@ -1907,6 +1938,35 @@ Docs.oracle.com Statement (Java Platform SE 7 ) In-text: (Docs.oracle.com, 1993)
  Statement (Java Platform SE 7 ).
  [online] Available at: http://docs.oracle.com/javase/7/docs/api/java/sql/Statemen
 t.html [Accessed 21 May.
+ 2014].
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "Version Control"
+
+\end_inset
+
+Oss-watch.ac.uk What is version control? Why is it important for due diligence?
+ In-text: (Oss-watch.ac.uk, 2013) Bibliography: Oss-watch.ac.uk, (2013).
+ What is version control? Why is it important for due diligence?.
+ [online] Available at: http://oss-watch.ac.uk/resources/versioncontrol [Accessed
+ 22 May.
+ 2014].
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "Github"
+
+\end_inset
+
+Build software better, together In-text: (GitHub, 2014) Bibliography: GitHub,
+ (2014).
+ Build software better, together.
+ [online] Available at: https://github.com/about [Accessed 22 May.
  2014].
 \end_layout
 

@@ -163,9 +163,66 @@ State Of The Art
 \end_layout
 
 \begin_layout Standard
-As is, most services related to security and development revolve around
- several consultants either overseeing a companys work and offering help,
- or do it for them
+As is, there are no applications out there that can analyse a software specifica
+tion automatically.
+ Most services are designed around practices while developing, like risk
+ analysis or thread modelling.
+ All which has to be done manually.
+ The Microsoft Security Development Lifecycle (SDL) Process is a multi-step
+ process for creating secure applications using both risk analysis and thread
+ modelling to map security related issues.
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Microsoft"
+
+\end_inset
+
+ One of the steps in this 7 step process is 
+\begin_inset Quotes eld
+\end_inset
+
+Perform Dynamic Analysis
+\begin_inset Quotes erd
+\end_inset
+
+, which includes running a software that monitors an application and checks
+ for critical security problems.
+ This step is performed with an already running version of an application,
+ meaning it is of no use to someone who's still in the planning phase of
+ software development.
+\end_layout
+
+\begin_layout Standard
+Other possibilities for security assessment are hiring consultants that
+ would either help with developing, or install their customized applications
+ after development has been completed.
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "AppSec"
+
+\end_inset
+
+ This obviously comes with a price, and hiring several would be out of reach
+ for smaller companies or for sole proprietorship.
+ A single consultant would cost around $200 and upwards.
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Consulting-1,Consulting-2,Consulting-3"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+There's a clear need for a solution that is designed to handle security
+ issues earlier in the development process, performs analysis automatically
+ and comes with a price that would make it available to home developers
+ as well as large companies.
+ 
 \end_layout
 
 \begin_layout Section
@@ -1981,6 +2038,78 @@ Build software better, together In-text: (GitHub, 2014) Bibliography: GitHub,
  (2014).
  Build software better, together.
  [online] Available at: https://github.com/about [Accessed 22 May.
+ 2014].
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "Microsoft"
+
+\end_inset
+
+Microsoft.com Microsoft Security Development Lifecycle In-text: (Microsoft.com,
+ 2014) Bibliography: Microsoft.com, (2014).
+ Microsoft Security Development Lifecycle.
+ [online] Available at: https://www.microsoft.com/security/sdl/default.aspx
+ [Accessed 23 May.
+ 2014].
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "AppSec"
+
+\end_inset
+
+https://www.appsecconsulting.com/Application-Security/application-security-program
+-development/menu-id-62.html
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "Consulting-1"
+
+\end_inset
+
+How To Set Your Consulting Fees Forbes How To Set Your Consulting Fees In-text:
+ (Forbes, 2006) Bibliography: Forbes, (2006).
+ How To Set Your Consulting Fees.
+ [online] Available at: http://www.forbes.com/2006/11/06/bostonconsulting-marsh-mc
+kinsey-ent-fin-cx_mc_1106pricing.html [Accessed 23 May.
+ 2014].
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "Consulting-2"
+
+\end_inset
+
+Startmyconsultingbusiness.com How to set your hourly consulting rate In-text:
+ (Startmyconsultingbusiness.com, 2014) Bibliography: Startmyconsultingbusiness.com
+, (2014).
+ How to set your hourly consulting rate.
+ [online] Available at: http://startmyconsultingbusiness.com/how-to-set-your-rate
+/ [Accessed 23 May.
+ 2014].
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "Consulting-3"
+
+\end_inset
+
+Forbes Low Consulting Rates Leave Accenture High And Dry In-text: (Forbes,
+ 2011) Bibliography: Forbes, (2011).
+ Low Consulting Rates Leave Accenture High And Dry.
+ [online] Available at: http://www.forbes.com/sites/greatspeculations/2011/02/14/l
+ow-consulting-rates-leave-accenture-high-and-dry/ [Accessed 23 May.
  2014].
 \end_layout
 

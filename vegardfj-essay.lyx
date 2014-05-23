@@ -155,6 +155,20 @@ In this paper, we'll talk about a proposed software, designed to help plan
 \end_layout
 
 \begin_layout Section
+Background
+\end_layout
+
+\begin_layout Subsection
+State Of The Art
+\end_layout
+
+\begin_layout Standard
+As is, most services related to security and development revolve around
+ several consultants either overseeing a companys work and offering help,
+ or do it for them
+\end_layout
+
+\begin_layout Section
 Thesis Statement
 \end_layout
 

@@ -221,7 +221,7 @@ Software
 
 \begin_layout Standard
 As mentioned earlier, the application used in step 7 of the Microsoft SDL
- is designed to take an already existing software and run analysis h
+ is designed to take an already existing software and analyse it.
 \end_layout
 
 \begin_layout Subsection
@@ -265,22 +265,130 @@ Objective of the Thesis
 
 \begin_layout Standard
 How can we best design an application, hereby referred to as SecuritySoftware,
- to solve the needs we've highlighted so far? In short, our application
- has to answer the statement: 
-\shape italic
-how can we create an application that would highlight security issues early
- in the planning phase, and integrate this as good as possible with already
- existing specification related methods.
+ to solve the needs we've highlighted so far? There's a need for a process
+ to handle these needs, and the software to implement that process.
+ The goal for SecuritySoftware is to provide developers with a tool to help
+ plan for features that are secure against external threats like attacks
+ through security holes, viruses and poor programming solutions (an example
+ would be using Statements 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Statement"
+
+\end_inset
+
+ instead of PreparedStatement 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "PreparedStatement"
+
+\end_inset
+
+).
+ This software has to be usable by an end user and consist of the following
+ main features:
+\end_layout
+
+\begin_layout Itemize
+Comprehensible
+\end_layout
+
+\begin_layout Itemize
+Usefulness
+\end_layout
+
+\begin_layout Itemize
+Acceptable coverage on security issues
+\end_layout
+
+\begin_layout Itemize
+Resource efficient
+\end_layout
+
+\begin_layout Itemize
+Scalability in relation to software architecture size
+\end_layout
+
+\begin_layout Paragraph
+Comprehensible
 \end_layout
 
 \begin_layout Standard
-We will discuss in the success criterias how to implement this in a way
- that would let our application become an asset to the planning phase of
- software-related development projects.
+SecuritySoftware will be designed to let a system architect use it without
+ requiring assistance from a consultant already familiar with the application
+ or other security related programs.
+ Each step in the process needs to be understandable, and flow organically
+ from the previous step.
+ Meaning, should step 1 list information about the clients software, then
+ step 2 would use this information to build on.
+\end_layout
+
+\begin_layout Paragraph
+Usefulness
+\end_layout
+
+\begin_layout Standard
+Determining whether or not something is useful is often decided by the end
+ user.
+ The goal for SecuritySoftware is to provide a service that would analyse
+ a software specification and provide a list of possible security risks
+ and the measures that has to be taken.
+ Making sure that it stays updated with the latest issues and solutions
+ is of utmost importance to make sure it stays useful.
+\end_layout
+
+\begin_layout Paragraph
+Coverage
+\end_layout
+
+\begin_layout Standard
+Security issues are constantly being discovered, and the correct measures
+ that has to be taken to prevent them.
+ For SecuritySoftware to provide an acceptable coverage, the application
+ has to be easily updated to stay relevant.
+ There will always be issues that have not been discovered yet, but as long
+ as the database providing information is being maintained, SecuritySoftware
+ should be able to keep up with the discovery of new security issues and
+ the measures that has to be taken.
+\end_layout
+
+\begin_layout Paragraph
+Resource efficiency
+\end_layout
+
+\begin_layout Standard
+Slow and inefficient applications are one of the more annoying problems
+ for software developmers.
+ Being held back by the software itself is a waste of time that might not
+ wasteable.
+ SecuritySoftware aims to provide a service that will run efficient on modern
+ computers, and let the user be the possible bottleneck, and not the system
+ itself.
+ 
+\end_layout
+
+\begin_layout Paragraph
+Scalability
+\end_layout
+
+\begin_layout Standard
+As highlighted in the background information, there are services provided
+ that are unreachable for smaller companies because of cost.
+ SecuritySoftware will aim to be usable for both large scale architectures
+ and smaller sized projects.
+ This will make it available for both large and small software development
+ teams.
 \end_layout
 
 \begin_layout Subsection
 Artifacts
+\end_layout
+
+\begin_layout Standard
+SecuritySoftware will consist of two artifacts.
+ The software itself, and the process description for an end user.
+ This process description is the step-by-step process encountered when a
+ software architect uses SecuritySoftware.
 \end_layout
 
 \begin_layout Section
@@ -304,31 +412,40 @@ Maintenance developer
 Management.
 \end_layout
 
+\begin_layout Paragraph
+System Architect
+\end_layout
+
 \begin_layout Standard
-The system architect is the end user of SecuritySoftware.
+The end user of SecuritySoftware is called a system architect.
  When the software reaches a useable state, the system architect would be
  able to use the program to analysis a system specification.
  In it's current iteration, there are no plans for requiring a consultant
  to provide assistance.
 \end_layout
 
+\begin_layout Paragraph
+Maintenance Developer
+\end_layout
+
 \begin_layout Standard
-The maintenance developer makes sure the system database stays relevant
- with the latest information regarding security leaks and interesting informatio
-n.
+For SecuritySoftware to stay relevant in an ever changing software development
+ world, the system needs to be updated regulary.
+ A maintenance developer would update the database with the latest information
+ regarding security leaks, measures and other relevant information.
  Other responsibilities such as keeping the software bug free and usable
- on newer hardware falls to the maintenance developer.
+ on newer hardware, also falls to the maintenance developer.
  
+\end_layout
+
+\begin_layout Paragraph
+Management
 \end_layout
 
 \begin_layout Standard
-The last stakeholder of interest is management.
- Main responsibilities are keeping the server and database up and running.
- 
-\end_layout
-
-\begin_layout Subsection
-Artifacts
+SecuritySoftware gets all its information from a database, and this database
+ has to stay online and be maintained regulary.
+ This is the managements responsibility.
 \end_layout
 
 \begin_layout Section
@@ -336,91 +453,183 @@ Success Criteria
 \end_layout
 
 \begin_layout Subsection
-Goal Statement
+Interests
 \end_layout
 
 \begin_layout Standard
-The goal for SecuritySoftware is to provide developers with a tool to help
- plan for features that are secure against external threats like attacks
- through security holes, viruses and poor programming solutions (an example
- would be using Statements 
+Each stakeholders interest are different, and therefore the criteria for
+ sucess may be different for each one.
+ Below is an overview of the interests each stakeholders has, as well as
+ a short description explaining each point.
+\end_layout
+
+\begin_layout Subsubsection
+System Architect
+\end_layout
+
+\begin_layout Standard
+A System architect has the following interests:
+\end_layout
+
+\begin_layout Itemize
+Comprehensible
+\end_layout
+
+\begin_layout Itemize
+Usefulness
+\end_layout
+
+\begin_layout Itemize
+Acceptable coverage on security issues
+\end_layout
+
+\begin_layout Itemize
+Resource efficient
+\end_layout
+
+\begin_layout Itemize
+Scalability in relation to software architecture size
+\end_layout
+
+\begin_layout Standard
+For a more detailed explanation, please refer to section 3.
+\end_layout
+
+\begin_layout Subsubsection
+Maintenance Developer
+\end_layout
+
+\begin_layout Standard
+A maintenance developer has the following interests:
+\end_layout
+
+\begin_layout Itemize
+Easy database access
+\end_layout
+
+\begin_layout Itemize
+Modularity
+\end_layout
+
+\begin_layout Paragraph
+Database access
+\end_layout
+
+\begin_layout Standard
+One of the main responsibilities for a maintenance developer is to make
+ sure the database is constantly being updated with new information regarding
+ security issues and measures.
+ Instead of updating the database manually via for example SQL, SecuritySoftware
+ will support this natively.
+ Adding information to the database is a seperate feature of the application,
+ alongside the security process itself.
+\end_layout
+
+\begin_layout Paragraph
+Modularity
+\end_layout
+
+\begin_layout Standard
+New issues and measures might require new features in SecuritySoftware.
+ To make implementing new features as easy as possible, SecuritySoftware
+ should be developed with modules, meaning that you could update one part
+ of the system without touching other features.
+ This would also make it easier for maintenance developers to troubleshoot
+ features that aren't working or have known bugs.
+\end_layout
+
+\begin_layout Subsubsection
+Management
+\end_layout
+
+\begin_layout Standard
+Management has the following interests:
+\end_layout
+
+\begin_layout Itemize
+Database based on modern solutions
+\end_layout
+
+\begin_layout Paragraph
+Database
+\end_layout
+
+\begin_layout Standard
+Managements only responsibility is to make sure the database is up and running.
+ Most of that lies within management itself.
+ Making sure that the database is running on a solid server is outside the
+ bounds of SecuritySoftwares responsibility, but making sure that the database
+ itself is using a modern solution like MySQL or Oracle is.
+ 
 \begin_inset CommandInset citation
 LatexCommand cite
-key "Statement"
+key "Oracle"
 
 \end_inset
 
- instead of PreparedStatement 
-\begin_inset CommandInset citation
-LatexCommand cite
-key "PreparedStatement"
 
-\end_inset
-
-).
 \end_layout
 
 \begin_layout Subsection
-General Criteria
+Success Criteria
 \end_layout
 
 \begin_layout Standard
-In order to best realize our goal, we need to set some criteria for success;
- what do we define as a success, and how can we achieve it.
- For software developers, important functions for an application is responsivene
-ss, cross-platform support and ease of use.
- Responsiveness is important, because when you're developing software, you
- do not want to be slowed down because the applications you are using is
- not working fluently, or keeping up with your speed.
- Cross-platform has become ever more important with the rise of Apples iMacs.
- More and more people use 
-\begin_inset Quotes eld
-\end_inset
-
-Mac's
-\begin_inset Quotes erd
-\end_inset
-
- to develop software, but there's also a large userbase that works on Linux.
- Windows also have a large userbase, and supporting them is pretty much
- mandatory and this day and age.
+Based on the interests of each stakeholder, a set of success criteria for
+ each artifact (listed in section 3.1) is listed below:
 \end_layout
 
-\begin_layout Subsection
-SecuritySoftware Specific Criteria
+\begin_layout Subsubsection
+Artifact 1 - SecuritySoftware
 \end_layout
 
 \begin_layout Standard
-For SecuritySoftware to be considered a success, the following criterias
- has to be met:
+For SecuritySoftware to be considered a success...
 \end_layout
 
-\begin_layout Quote
-
-\shape italic
-\begin_inset Quotes eld
-\end_inset
-
-The database of SecuritySoftware has to be easily updated for the software
- to stay relevant.
-\begin_inset Quotes erd
-\end_inset
-
-
+\begin_layout Enumerate
+the application has to be easy to use and require no prior knowledge surrounding
+ security related application
 \end_layout
 
-\begin_layout Quote
+\begin_layout Enumerate
+the application has to provide security related coverage for both large
+ and small architectures
+\end_layout
 
-\shape italic
-\begin_inset Quotes eld
-\end_inset
+\begin_layout Enumerate
+the application has to be implemented in a way to allow updates and bug
+ fixes without compromising the functionality of the software
+\end_layout
 
-SecuritySoftware should require no former knowledge regarding security or
- programming.
-\begin_inset Quotes eld
-\end_inset
+\begin_layout Enumerate
+the application's knowledgebase has to updated continously to make sure
+ Securitysoftware stay relevant and useful
+\end_layout
 
+\begin_layout Enumerate
+the application's knowledgebase has to be easily updated to cover criteria
+ number 4
+\end_layout
 
+\begin_layout Subsubsection
+Artifact 2 - End User Process Description
+\end_layout
+
+\begin_layout Standard
+For the end user process description to be considered a success...
+\end_layout
+
+\begin_layout Enumerate
+the process has to be logical and easily understandable
+\end_layout
+
+\begin_layout Enumerate
+the process has to be precise
+\end_layout
+
+\begin_layout Enumerate
+the process has to be time efficient
 \end_layout
 
 \begin_layout Section
@@ -441,6 +650,130 @@ Select the Appropiate Research Method
 
 \begin_layout Section
 Research Plan
+\end_layout
+
+\begin_layout Standard
+Below is an overview of the planned milestones of this project, and their
+ expected dates.
+ The thesis itself is continously worked on during each phase.
+\end_layout
+
+\begin_layout Subsection
+Phase 1 - Process description 
+\end_layout
+
+\begin_layout Standard
+Before any form of implementation or design can be done, the end user process
+ description itself has to be completed.
+ A document describing each step encountered in the software will be written.
+ 
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Expected date of completion: September 1st, 2014.
+\end_layout
+
+\begin_layout Subsection
+Phase 2 - SecuritySoftware Design document
+\end_layout
+
+\begin_layout Standard
+After the first version of the process description is done, a design document
+ highlighting how SecuritySoftware will be implemented and what technologies
+ will be used is needed.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Expected date of completion: September 14th, 2014.
+\end_layout
+
+\begin_layout Subsection
+Phase 3 - Implementing SecuritySoftware
+\end_layout
+
+\begin_layout Standard
+Implementing the software itself is a long and drawn out process, that will
+ change numerours times during the course of the thesis.
+ A first prototype version of the software will be made.
+ 
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Expected date of completion: December, 1st 2014.
+\end_layout
+
+\begin_layout Subsection
+Phase 4 - Re-evaluate Process Description and Design Document
+\end_layout
+
+\begin_layout Standard
+There are bound to be problems with either the design or the process that
+ will arise during the implementation phase.
+ After phase 3 has completed, a proper re-evalution is needed to prepare
+ for the next implementation phase.
+ 
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Expected date of completion: December 7th, 2014.
+\end_layout
+
+\begin_layout Subsection
+Phase 5 - Second Implementation of SecuritySoftware
+\end_layout
+
+\begin_layout Standard
+The second implementation phase will begin right after the re-evulation
+ has completed.
+ This is the planned last phase of implementation, and therefore where SecurityS
+oftware will reach its final version.
+ 
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Expected date of completion: March 1st, 2015
+\end_layout
+
+\begin_layout Subsection
+Phase 6 - Evaluation
+\end_layout
+
+\begin_layout Standard
+After implementation has completed, an evalution according to section 6.2
+ is needed to verify if the success criteria has been met.
+ 
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Expected date of completion: April 1st 2015
+\end_layout
+
+\begin_layout Subsection
+Phase 7 - Finalizing Thesis
+\end_layout
+
+\begin_layout Standard
+The last phase is finishing the thesis.
+ Deadline has not been set, so this date will most likely change.
+ 
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Expected date of completion: June 1st, 2015.
 \end_layout
 
 \begin_layout Section
@@ -653,6 +986,21 @@ Forbes Low Consulting Rates Leave Accenture High And Dry In-text: (Forbes,
  Low Consulting Rates Leave Accenture High And Dry.
  [online] Available at: http://www.forbes.com/sites/greatspeculations/2011/02/14/l
 ow-consulting-rates-leave-accenture-high-and-dry/ [Accessed 23 May.
+ 2014].
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "Oracle"
+
+\end_inset
+
+Oracle.com Oracle Database 12c - Plug into the Cloud | Multitenant Database
+ |Oracle In-text: (Oracle.com, 2014) Bibliography: Oracle.com, (2014).
+ Oracle Database 12c - Plug into the Cloud | Multitenant Database |Oracle.
+ [online] Available at: http://www.oracle.com/us/products/database/overview/index.h
+tml [Accessed 29 May.
  2014].
 \end_layout
 

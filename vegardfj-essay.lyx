@@ -640,6 +640,62 @@ Research Method
 Innovation
 \end_layout
 
+\begin_layout Standard
+As presented in section 3.1, there are two artifacts for this thesis.
+ SecuritySoftware, and the end user process description.
+ While the software itself is important, the real backbone of the thesis
+ is the process itself.
+ 
+\end_layout
+
+\begin_layout Subsubsection
+Process Description
+\end_layout
+
+\begin_layout Standard
+The process description is a 4 step process where the user starts with a
+ software specification and end up with a list of security issues and the
+ measures that has to be taken to prevent them.
+ The first step is where the end user lists all relevant clients the specificed
+ system is going to be used on.
+ Examples include iOS, Android, web browsers etc.
+ After this step has been completed, the user is asked to specify how the
+ server side will look like.
+ Third step involve listing the features that this system will provide,
+ and how these features communicate from the client to the server.
+\end_layout
+
+\begin_layout Standard
+Once these 3 steps have been completed, the analysis steps in.
+ By taking the information provided from the 3 previous steps, SQL querys
+ will be performed to fetch information from the knowledge database.
+ 
+\end_layout
+
+\begin_layout Subsubsection
+The Software
+\end_layout
+
+\begin_layout Standard
+SecuritySoftware will provide with a GUI to guide the user through this
+ process.
+ Along the way, helpful information will be provided to make the process
+ as easy and smooth as possible.
+ It will be available on Windows, Linux and iOS.
+\end_layout
+
+\begin_layout Subsubsection
+Working Together
+\end_layout
+
+\begin_layout Standard
+When a user works with SecuritySoftware, both artifacts are in play.
+ Each step presented in the application is a step in the process.
+ SecuritySoftware will allow the end user to go back and forth between steps
+ if needed, making it easier to change up the specification should it be
+ needed.
+\end_layout
+
 \begin_layout Subsection
 Evalution
 \end_layout

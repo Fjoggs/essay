@@ -421,7 +421,7 @@ The end user of SecuritySoftware is called a system architect.
  When the software reaches a useable state, the system architect would be
  able to use the program to analysis a system specification.
  In it's current iteration, there are no plans for requiring a consultant
- to provide assistance.
+ to provide assistance with the process.
 \end_layout
 
 \begin_layout Paragraph
@@ -457,8 +457,8 @@ Interests
 \end_layout
 
 \begin_layout Standard
-Each stakeholders interest are different, and therefore the criteria for
- sucess may be different for each one.
+Each stakeholders interests are different.
+ In other words, the criteria for success vary for each one.
  Below is an overview of the interests each stakeholders has, as well as
  a short description explaining each point.
 \end_layout
@@ -604,7 +604,7 @@ the application has to be implemented in a way to allow updates and bug
 
 \begin_layout Enumerate
 the application's knowledgebase has to updated continously to make sure
- Securitysoftware stay relevant and useful
+ SecuritySoftware stay relevant and useful
 \end_layout
 
 \begin_layout Enumerate
@@ -643,8 +643,8 @@ Innovation
 \begin_layout Standard
 As presented in section 3.1, there are two artifacts for this thesis.
  SecuritySoftware, and the end user process description.
- While the software itself is important, the real backbone of the thesis
- is the process itself.
+ While the software itself is important, the real backbone is the process
+ description itself.
  
 \end_layout
 
@@ -667,9 +667,10 @@ The process description is a 4 step process where the user starts with a
 
 \begin_layout Standard
 Once these 3 steps have been completed, the analysis steps in.
- By taking the information provided from the 3 previous steps, SQL querys
- will be performed to fetch information from the knowledge database.
- 
+ By combining the information provided in the previous steps and using this
+ to query the SecuritySoftware database.
+ This step is automated by the software running the process, meaning the
+ user will have no control over how the analysis is performed.
 \end_layout
 
 \begin_layout Subsubsection
@@ -677,15 +678,17 @@ The Software
 \end_layout
 
 \begin_layout Standard
-SecuritySoftware will provide with a GUI to guide the user through this
- process.
+SecuritySoftware will provide the user with a graphical user interface (GUI)
+ that will help guiding through the each step in the process.
+ Maintenance developers will download a seperate version of the application,
+ to gain access to the special features regarding updating the database.
  Along the way, helpful information will be provided to make the process
- as easy and smooth as possible.
- It will be available on Windows, Linux and iOS.
+ as easy and as smooth as possible.
+ 
 \end_layout
 
 \begin_layout Subsubsection
-Working Together
+Artifacts Combined
 \end_layout
 
 \begin_layout Standard

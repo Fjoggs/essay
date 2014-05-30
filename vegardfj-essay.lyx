@@ -82,7 +82,7 @@ LatexCommand tableofcontents
 \end_layout
 
 \begin_layout Standard
-\begin_inset FloatList table
+\begin_inset FloatList figure
 
 \end_inset
 
@@ -147,7 +147,9 @@ key "Avast"
 \end_layout
 
 \begin_layout Standard
-This paper will present an idea on how to design a software 
+This paper will present an idea on how to design a software that would provide
+ the means for security analysis at an early stage in software development
+ planning, and what it would take to define it as a success.
 \end_layout
 
 \begin_layout Standard
@@ -636,6 +638,63 @@ the process has to be time efficient
 Research Method
 \end_layout
 
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename research-method.png
+	width 25page%
+	height 35page%
+	keepAspectRatio
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Research methods
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Software development and theses use the same approach from inception to
+ completion.
+ When needs arise for something new, a theory or an idea is presented.
+ This idea is then built on, either via scientific findings for a thesis
+ or computer programming for an application.
+ At some point, evalution is needed.
+ There are different methods for evalution, such as field studies, surveys
+ or even experiments in a laboratory.
+ When evulation has completed, the cycle repeats itself.
+ In light of the results, the idea or theory might need modification, which
+ is then built on with new findings or different programming methods.
+ 
+\end_layout
+
+\begin_layout Standard
+SecuritySoftware and the process description will live through this cycle,
+ and will see changes from its inception to finalization through several
+ iterations.
+\end_layout
+
 \begin_layout Subsection
 Innovation
 \end_layout
@@ -700,8 +759,42 @@ When a user works with SecuritySoftware, both artifacts are in play.
 Evalution
 \end_layout
 
+\begin_layout Standard
+Evalutating a software is one of the major aspects of development.
+ Unknown issues, weird graphical solutions and awkward language could slip
+ unnoticed for the development team that are focused on the development
+ itself.
+ For SecuritySoftware and the process description, the best way to evaluate
+ would be through a field study.
+ This would provide the precision and realism to help fine tuning both the
+ process, and the software itself.
+ A way to go about this, would be to provide a number of people with a copy
+ of the software and giving them a task to complete.
+ Because all subjects are working on the same problem, more issues would
+ arise from the various mindsets each end user have when going through the
+ step-by-step process.
+\end_layout
+
 \begin_layout Subsection
 Select the Appropiate Research Method
+\end_layout
+
+\begin_layout Standard
+The reasoning behind choosing a field study, is because it provides the
+ realism needed to properly evalute the performance of the software and
+ if the process is natural for a system architect to use.
+ Another possiblity would be to use a survey, asking test subjects whether
+ or not they would be interested in using the services provided by SecuritySoftw
+are.
+ Problem with this is that the results would be subjective.
+ Each test subject have different ideas behind the best way of doing things,
+ and might not agree with the theory that the software is built on.
+ General evalution methods like surveys are avoided, because SecuritySoftware
+ is a tool that is very specific in its target audience, and a study would
+ provide better, more accurate results in a realistic environment.
+ A field study could change the opinions of these, by letting them try it
+ and experience the results it provides.
+ 
 \end_layout
 
 \begin_layout Section
@@ -836,6 +929,22 @@ Expected date of completion: June 1st, 2015.
 Conclusion
 \end_layout
 
+\begin_layout Standard
+As seen in the background information, there is an opportunity for a new
+ kind of software to emerge on the development market.
+ A lightweight, cheap and easy to use software for security related issues.
+ Where other solutions provide features to help during development or after,
+ SecuritySoftware aims to target issues earlier in the planning phase.
+ As a cost-benefit analysis is crucial during the making of software specificati
+ons, or creating use-case diagrams, the features provided by SecuritySoftware
+ could be an asset to go along these.
+ For a year long thesis, there's not much time to develop a fully functional
+ software that would hit the market upon release.
+ But, the discussion, results and evalutions found in the eventual thesis
+ could provide the foundations for an idea and a prototype that could be
+ developed further.
+\end_layout
+
 \begin_layout Bibliography
 \begin_inset CommandInset bibitem
 LatexCommand bibitem
@@ -843,10 +952,7 @@ key "Avast"
 
 \end_inset
 
-Avast.com AVAST 2014 | Last ned gratis antivirusprogramvare for virusbeskyttelse
- In-text: (Avast.com, 2014) Bibliography: Avast.com, (2014).
- AVAST 2014 | Last ned gratis antivirusprogramvare for virusbeskyttelse.
- [online] Available at: http://www.avast.com/no-no/ [Accessed 16 May.
+Avast.com AVAST 2014 | URL: http://www.avast.com/no-no/ [Accessed 16 May.
  2014].
 \end_layout
 
@@ -857,12 +963,8 @@ key "ASyncTask"
 
 \end_inset
 
-WebsiteAsyncTask | Android Developers Developer.android.com AsyncTask | Android
- Developers In-text: (Developer.android.com, 1918) Bibliography: Developer.android.c
-om, (1918).
- AsyncTask | Android Developers.
- [online] Available at: http://developer.android.com/reference/android/os/AsyncTas
-k.html [Accessed 16 May.
+Website AsyncTask | URL: http://developer.android.com/reference/android/os/AsyncTa
+sk.html [Accessed 16 May.
  2014].
 \end_layout
 
@@ -873,11 +975,8 @@ key "Service"
 
 \end_inset
 
-WebsiteService (Java EE 6 ) Docs.oracle.com Service (Java EE 6 ) In-text:
- (Docs.oracle.com, 2009) Bibliography: Docs.oracle.com, (2009).
- Service (Java EE 6 ).
- [online] Available at: http://docs.oracle.com/javaee/6/api/javax/xml/ws/Service.ht
-ml [Accessed 16 May.
+Website Service (Java EE 6 ) | URL: http://docs.oracle.com/javaee/6/api/javax/xml/
+ws/Service.html [Accessed 16 May.
  2014].
 \end_layout
 
@@ -888,14 +987,7 @@ key "McAfee"
 
 \end_inset
 
-WebsiteMcAfee—Antivirus, Encryption, DLP, IPS, Firewall, Email Security,
- Web Security, SaaS, Risk & Compliance Solutions Mcafee.com McAfee—Antivirus,
- Encryption, DLP, IPS, Firewall, Email Security, Web Security, SaaS, Risk
- & Compliance Solutions In-text: (Mcafee.com, 2014) Bibliography: Mcafee.com,
- (2014).
- McAfee—Antivirus, Encryption, DLP, IPS, Firewall, Email Security, Web Security,
- SaaS, Risk & Compliance Solutions.
- [online] Available at: http://www.mcafee.com/no/ [Accessed 16 May.
+Website McAfee | URL: http://www.mcafee.com/no/ [Accessed 16 May.
  2014].
 \end_layout
 
@@ -906,10 +998,7 @@ key "Norton"
 
 \end_inset
 
-Website No.norton.com Norton: antivirus & anti spyware & backup In-text: (No.norton.
-com, 2014) Bibliography: No.norton.com, (2014).
- Norton: antivirus & anti spyware & backup.
- [online] Available at: http://no.norton.com/ [Accessed 16 May.
+Website No.norton.com | URL: http://no.norton.com/ [Accessed 16 May.
  2014].
 \end_layout
 
@@ -920,12 +1009,8 @@ key "PreparedStatement"
 
 \end_inset
 
-PreparedStatement (Java Platform SE 7 ) Docs.oracle.com PreparedStatement
- (Java Platform SE 7 ) In-text: (Docs.oracle.com, 1993) Bibliography: Docs.oracle.co
-m, (1993).
- PreparedStatement (Java Platform SE 7 ).
- [online] Available at: http://docs.oracle.com/javase/7/docs/api/java/sql/Prepared
-Statement.html [Accessed 21 May.
+PreparedStatement (Java Platform SE 7 ) | URL: http://docs.oracle.com/javase/7/doc
+s/api/java/sql/PreparedStatement.html [Accessed 21 May.
  2014].
 \end_layout
 
@@ -936,11 +1021,8 @@ key "Statement"
 
 \end_inset
 
-Docs.oracle.com Statement (Java Platform SE 7 ) In-text: (Docs.oracle.com, 1993)
- Bibliography: Docs.oracle.com, (1993).
- Statement (Java Platform SE 7 ).
- [online] Available at: http://docs.oracle.com/javase/7/docs/api/java/sql/Statemen
-t.html [Accessed 21 May.
+Docs.oracle.com Statement (Java Platform SE 7 ) | URL: http://docs.oracle.com/javase
+/7/docs/api/java/sql/Statement.html [Accessed 21 May.
  2014].
 \end_layout
 
@@ -951,11 +1033,8 @@ key "Version Control"
 
 \end_inset
 
-Oss-watch.ac.uk What is version control? Why is it important for due diligence?
- In-text: (Oss-watch.ac.uk, 2013) Bibliography: Oss-watch.ac.uk, (2013).
- What is version control? Why is it important for due diligence?.
- [online] Available at: http://oss-watch.ac.uk/resources/versioncontrol [Accessed
- 22 May.
+Oss-watch.ac.uk What is version control? | URL: http://oss-watch.ac.uk/resources/ver
+sioncontrol [Accessed 22 May.
  2014].
 \end_layout
 
@@ -966,10 +1045,8 @@ key "Github"
 
 \end_inset
 
-Build software better, together In-text: (GitHub, 2014) Bibliography: GitHub,
- (2014).
- Build software better, together.
- [online] Available at: https://github.com/about [Accessed 22 May.
+Build software better, together In-text: (GitHub, 2014) | URL: https://github.com
+/about [Accessed 22 May.
  2014].
 \end_layout
 
@@ -980,11 +1057,8 @@ key "Microsoft"
 
 \end_inset
 
-Microsoft.com Microsoft Security Development Lifecycle In-text: (Microsoft.com,
- 2014) Bibliography: Microsoft.com, (2014).
- Microsoft Security Development Lifecycle.
- [online] Available at: https://www.microsoft.com/security/sdl/default.aspx
- [Accessed 23 May.
+Microsoft.com Microsoft Security Development Lifecycle URL: https://www.microsoft.c
+om/security/sdl/default.aspx [Accessed 23 May.
  2014].
 \end_layout
 
@@ -995,8 +1069,9 @@ key "AppSec"
 
 \end_inset
 
-https://www.appsecconsulting.com/Application-Security/application-security-program
--development/menu-id-62.html
+ AppSec Counsulting | URL: https://www.appsecconsulting.com/Application-Security/a
+pplication-security-program-development/menu-id-62.html [Accessed 21 May.
+ 2014]
 \end_layout
 
 \begin_layout Bibliography
@@ -1006,11 +1081,8 @@ key "Consulting-1"
 
 \end_inset
 
-How To Set Your Consulting Fees Forbes How To Set Your Consulting Fees In-text:
- (Forbes, 2006) Bibliography: Forbes, (2006).
- How To Set Your Consulting Fees.
- [online] Available at: http://www.forbes.com/2006/11/06/bostonconsulting-marsh-mc
-kinsey-ent-fin-cx_mc_1106pricing.html [Accessed 23 May.
+How To Set Your Consulting Fees | URL: http://www.forbes.com/2006/11/06/bostoncons
+ulting-marsh-mckinsey-ent-fin-cx_mc_1106pricing.html [Accessed 23 May.
  2014].
 \end_layout
 
@@ -1021,12 +1093,9 @@ key "Consulting-2"
 
 \end_inset
 
-Startmyconsultingbusiness.com How to set your hourly consulting rate In-text:
- (Startmyconsultingbusiness.com, 2014) Bibliography: Startmyconsultingbusiness.com
-, (2014).
- How to set your hourly consulting rate.
- [online] Available at: http://startmyconsultingbusiness.com/how-to-set-your-rate
-/ [Accessed 23 May.
+Startmyconsultingbusiness.com How to set your hourly consulting rate | URL:
+ http://startmyconsultingbusiness.com/how-to-set-your-rate/ [Accessed 23
+ May.
  2014].
 \end_layout
 
@@ -1037,11 +1106,9 @@ key "Consulting-3"
 
 \end_inset
 
-Forbes Low Consulting Rates Leave Accenture High And Dry In-text: (Forbes,
- 2011) Bibliography: Forbes, (2011).
- Low Consulting Rates Leave Accenture High And Dry.
- [online] Available at: http://www.forbes.com/sites/greatspeculations/2011/02/14/l
-ow-consulting-rates-leave-accenture-high-and-dry/ [Accessed 23 May.
+Forbes Low Consulting Rates Leave Accenture High And Dry | URL: http://www.forbes.
+com/sites/greatspeculations/2011/02/14/low-consulting-rates-leave-accenture-high
+-and-dry/ [Accessed 23 May.
  2014].
 \end_layout
 
@@ -1052,11 +1119,8 @@ key "Oracle"
 
 \end_inset
 
-Oracle.com Oracle Database 12c - Plug into the Cloud | Multitenant Database
- |Oracle In-text: (Oracle.com, 2014) Bibliography: Oracle.com, (2014).
- Oracle Database 12c - Plug into the Cloud | Multitenant Database |Oracle.
- [online] Available at: http://www.oracle.com/us/products/database/overview/index.h
-tml [Accessed 29 May.
+Oracle.com Oracle Database 12c - Plug into the Cloud | URL: http://www.oracle.com/u
+s/products/database/overview/index.html [Accessed 29 May.
  2014].
 \end_layout
 

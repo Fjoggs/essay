@@ -1,29 +1,21 @@
-#LyX 2.0 created this file. For more info see http://www.lyx.org/
-\lyxformat 413
+#LyX 1.6.10 created this file. For more info see http://www.lyx.org/
+\lyxformat 345
 \begin_document
 \begin_header
 \textclass article
 \use_default_options true
-\maintain_unincluded_children false
 \language english
-\language_package default
 \inputencoding auto
-\fontencoding global
 \font_roman default
 \font_sans default
 \font_typewriter default
 \font_default_family default
-\use_non_tex_fonts false
 \font_sc false
 \font_osf false
 \font_sf_scale 100
 \font_tt_scale 100
 
 \graphics default
-\default_output_format default
-\output_sync 0
-\bibtex_command default
-\index_command default
 \paperfontsize default
 \spacing single
 \use_hyperref false
@@ -31,31 +23,20 @@
 \use_geometry false
 \use_amsmath 1
 \use_esint 1
-\use_mhchem 1
-\use_mathdots 1
 \cite_engine basic
 \use_bibtopic false
-\use_indices false
 \paperorientation portrait
-\suppress_date false
-\use_refstyle 1
-\index Index
-\shortcut idx
-\color #008000
-\end_index
 \secnumdepth 3
 \tocdepth 3
 \paragraph_separation indent
-\paragraph_indentation default
+\defskip medskip
 \quotes_language english
 \papercolumns 1
 \papersides 1
 \paperpagestyle default
 \tracking_changes false
 \output_changes false
-\html_math_output 0
-\html_css_as_file 0
-\html_be_strict false
+\author "" 
 \end_header
 
 \begin_body
@@ -139,11 +120,12 @@ key "Avast"
 
  are some examples of companies that have created various softwares for
  security.
- Mostly virus scanning programs and firewall applications.
- But security related issues still haven't reached a significant part of
- the planning process of software development.
+ Mostly virus scanning programs and firewall applications, but security
+ related issues still haven't reached a significant part of the planning
+ process of software development.
  Instead of repairing damages after an attack, why not simply prevent them
- from happening in the first place? 
+ from happening in the first place.
+ 
 \end_layout
 
 \begin_layout Standard
@@ -163,11 +145,11 @@ This paper will present an idea on how to design a software that would provide
 The structure of this document is as follows.
  In section 2, we highlight what currently is out there and discuss their
  strength and weaknesses.
- Section 3 summarize needs and artifacts, and in section 4 we'll list the
- stakeholders.
+ Section 3 summarize needs and artifacts, and in section 4 we will list
+ the stakeholders.
  The sucess criteria for these stakeholders are listed and explained in
  section 5, while section 6 explains the artifacts we listed in section
- 3 and highlight how to evalute whether or not they could be called a success
+ 3 and highlights how to evalute whether or not they could be called a success
  when the project is complete.
  Section 7 gives an overview to the research plan, showing milestones and
  their respective dates.
@@ -179,30 +161,30 @@ Background - State of the Art
 \end_layout
 
 \begin_layout Standard
-As is, there are no applications out there that can analyse a software specifica
-tion automatically.
- Most services are designed around practices while developing, like risk
- analysis or thread modelling, or analysing the software after it has been
- developed.
- 
+Security related practices and frameworks are split into different camps.
+ Some focus on improving security during the implementation phase of software
+ development, while others analyse already working applications.
+ In this section we will mention some of the methods, standards and tools
+ surrounding this subject and highlight the gaps that this thesis would
+ try to fill.
 \end_layout
 
 \begin_layout Subsection
-Processes
+Methods
 \end_layout
 
 \begin_layout Standard
 The Microsoft Security Development Lifecycle (SDL) Process is a multi-step
  process for creating secure applications using both risk analysis and thread
- modelling to map security related issues.
- 
+ modelling to map security related issues 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "Microsoft"
 
 \end_inset
 
- One of the steps in this 7 step process is 
+.
+ One of the steps in this seven step process is 
 \begin_inset Quotes eld
 \end_inset
 
@@ -217,48 +199,70 @@ Perform Dynamic Analysis
  software development.
 \end_layout
 
-\begin_layout Subsection
-Software
-\end_layout
-
 \begin_layout Standard
-As mentioned earlier, the application used in step 7 of the Microsoft SDL
- is designed to take an already existing software and analyse it.
-\end_layout
-
-\begin_layout Subsection
-Consultants
-\end_layout
-
-\begin_layout Standard
-Other possibilities for security assessment are hiring consultants that
- would either help with developing, or install their customized applications
- after development has been completed.
- 
-\begin_inset CommandInset citation
-LatexCommand cite
-key "AppSec"
-
+A different approach is the Information Security Management System.
+ ISMS is a set of policies 
+\begin_inset Quotes eld
 \end_inset
 
- This obviously comes with a price, and hiring several would be out of reach
- for smaller companies or for sole proprietorship.
- A single consultant would cost around $200 and upwards.
- 
-\begin_inset CommandInset citation
-LatexCommand cite
-key "Consulting-1,Consulting-2,Consulting-3"
-
+concerned with information security managment or IT related risks
+\begin_inset Quotes erd
 \end_inset
 
 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "ISMS"
+
+\end_inset
+
+.
+ ISMS main goal is to minimize risk and reduce the impact a security breach
+ on a system could have.
+ Where the SDL process revolves around the development of software and creating
+ design specifications covering security issues, ISMS focuses more on management.
+ Security breaches could happen from inside the company, by their own employees
+ and this could be prevented using policies defined in an ISMS.
+ 
+\end_layout
+
+\begin_layout Subsection
+Standards
 \end_layout
 
 \begin_layout Standard
-There's a clear need for a solution that is designed to handle security
- issues earlier in the development process, performs analysis automatically
- and comes with a price that would make it available to home developers
- as well as large companies.
+As mentioned in the section above, ISMS is an approach to security management.
+ This practice was in 2005 implemented in the ISO/IEC 27001 standard 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "ISO27001:2005"
+
+\end_inset
+
+, which is covering cyber security related issues.
+ 
+\end_layout
+
+\begin_layout Subsection
+Tool Support for Security Analysis
+\end_layout
+
+\begin_layout Standard
+In the introduction we briefly mentioned software companies like Norton
+ and Avast.
+ They provide both companies and private persons with security tools like
+ firewall applications and anti-virus software.
+ These are tools that provide protection against security breaches via for
+ example applications with security holes, visiting web sites with malicious
+ intents, out of date firmware on network routers or the operating system
+ itself.
+ This is fixing the problem by removing them after they've occured, instead
+ of preventing the circumstances that are required for them to happen in
+ the first place.
+\end_layout
+
+\begin_layout Subsection
+Gap
 \end_layout
 
 \begin_layout Section
@@ -267,8 +271,9 @@ Objective of the Thesis
 
 \begin_layout Standard
 How can we best design an application, hereby referred to as SecuritySoftware,
- to solve the needs we've highlighted so far? There's a need for a process
- to handle these needs, and the software to implement that process.
+ to solve the needs we've highlighted so far.
+ There is a need for a process to handle these, and the software to implement
+ that process.
  The goal for SecuritySoftware is to provide developers with a tool to help
  plan for features that are secure against external threats like attacks
  through security holes, viruses and poor programming solutions (an example
@@ -345,7 +350,7 @@ Coverage
 
 \begin_layout Standard
 Security issues are constantly being discovered, and the correct measures
- that has to be taken to prevent them.
+ that have to be taken to prevent them.
  For SecuritySoftware to provide an acceptable coverage, the application
  has to be easily updated to stay relevant.
  There will always be issues that have not been discovered yet, but as long
@@ -398,7 +403,7 @@ Stakeholders
 \end_layout
 
 \begin_layout Standard
-There's 3 main stakeholders of interest in relation to SecuritySoftware:
+There are three main stakeholders of interest in relation to SecuritySoftware:
  
 \end_layout
 
@@ -441,7 +446,7 @@ For SecuritySoftware to stay relevant in an ever changing software development
 \end_layout
 
 \begin_layout Paragraph
-Management
+Operation
 \end_layout
 
 \begin_layout Standard
@@ -452,6 +457,12 @@ SecuritySoftware gets all its information from a database, and this database
 
 \begin_layout Section
 Success Criteria
+\end_layout
+
+\begin_layout Standard
+In light of the stakeholders, we will highlight what their needs are and
+ define some criteria that will be used when evaluating whether or not our
+ artifacts were a success.
 \end_layout
 
 \begin_layout Subsection
@@ -541,11 +552,11 @@ New issues and measures might require new features in SecuritySoftware.
 \end_layout
 
 \begin_layout Subsubsection
-Management
+Operation
 \end_layout
 
 \begin_layout Standard
-Management has the following interests:
+Operation has the following interests:
 \end_layout
 
 \begin_layout Itemize
@@ -557,19 +568,19 @@ Database
 \end_layout
 
 \begin_layout Standard
-Managements only responsibility is to make sure the database is up and running.
- Most of that lies within management itself.
+Operations only responsibility is to make sure the database is up and running.
+ Most of that lies within operation itself.
  Making sure that the database is running on a solid server is outside the
  bounds of SecuritySoftwares responsibility, but making sure that the database
- itself is using a modern solution like MySQL or Oracle is.
- 
+ itself is using a modern solution like MySQL or Oracle are 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "Oracle"
 
 \end_inset
 
-
+.
+ 
 \end_layout
 
 \begin_layout Subsection
@@ -586,32 +597,33 @@ Artifact 1 - SecuritySoftware
 \end_layout
 
 \begin_layout Standard
-For SecuritySoftware to be considered a success...
+For SecuritySoftware to be considered a success, the following criteria
+ has to be met:
 \end_layout
 
 \begin_layout Enumerate
-the application has to be easy to use and require no prior knowledge surrounding
+the application is easy to use and require no prior knowledge surrounding
  security related application
 \end_layout
 
 \begin_layout Enumerate
-the application has to provide security related coverage for both large
- and small architectures
+the application is providing security related coverage for both large and
+ small architectures
 \end_layout
 
 \begin_layout Enumerate
-the application has to be implemented in a way to allow updates and bug
- fixes without compromising the functionality of the software
+the application is implemented in a way to allow updates and bug fixes without
+ compromising the functionality of the software
 \end_layout
 
 \begin_layout Enumerate
-the application's knowledgebase has to updated continously to make sure
- SecuritySoftware stay relevant and useful
+the application's knowledgebase is updated continously to make sure SecuritySoft
+ware stay relevant and useful
 \end_layout
 
 \begin_layout Enumerate
-the application's knowledgebase has to be easily updated to cover criteria
- number 4
+the application's knowledgebase is easily updated to cover criteria number
+ 4
 \end_layout
 
 \begin_layout Subsubsection
@@ -677,6 +689,7 @@ Research methods
 \begin_layout Standard
 Software development and theses use the same approach from inception to
  completion.
+ See Figure 1 for an overview of this approach.
  When needs arise for something new, a theory or an idea is presented.
  This idea is then built on, either via scientific findings for a thesis
  or computer programming for an application.
@@ -824,7 +837,7 @@ Before any form of implementation or design can be done, the end user process
 \begin_layout Standard
 
 \series bold
-Expected date of completion: September 1st, 2014.
+Expected date of completion: August 15th, 2014.
 \end_layout
 
 \begin_layout Subsection
@@ -840,7 +853,7 @@ After the first version of the process description is done, a design document
 \begin_layout Standard
 
 \series bold
-Expected date of completion: September 14th, 2014.
+Expected date of completion: September 15th, 2014.
 \end_layout
 
 \begin_layout Subsection
@@ -861,21 +874,21 @@ Expected date of completion: December, 1st 2014.
 \end_layout
 
 \begin_layout Subsection
-Phase 4 - Re-evaluate Process Description and Design Document
+Phase 4 - Evaluate Process Description and Design Document
 \end_layout
 
 \begin_layout Standard
 There are bound to be problems with either the design or the process that
  will arise during the implementation phase.
- After phase 3 has completed, a proper re-evalution is needed to prepare
- for the next implementation phase.
+ After phase 3 has completed, a proper evalution is needed to prepare for
+ the next implementation phase.
  
 \end_layout
 
 \begin_layout Standard
 
 \series bold
-Expected date of completion: December 7th, 2014.
+Expected date of completion: December 1st, 2014.
 \end_layout
 
 \begin_layout Subsection
@@ -893,23 +906,23 @@ oftware will reach its final version.
 \begin_layout Standard
 
 \series bold
-Expected date of completion: March 1st, 2015
+Expected date of completion: January 15th, 2015
 \end_layout
 
 \begin_layout Subsection
-Phase 6 - Evaluation
+Phase 6 - Re-evaluation
 \end_layout
 
 \begin_layout Standard
-After implementation has completed, an evalution according to section 6.2
- is needed to verify if the success criteria has been met.
+After implementation has completed, a re-evalution according to section
+ 6.2 is needed to verify if the success criteria has been met.
  
 \end_layout
 
 \begin_layout Standard
 
 \series bold
-Expected date of completion: April 1st 2015
+Expected date of completion: March 1st 2015
 \end_layout
 
 \begin_layout Subsection
@@ -918,14 +931,12 @@ Phase 7 - Finalizing Thesis
 
 \begin_layout Standard
 The last phase is finishing the thesis.
- Deadline has not been set, so this date will most likely change.
- 
 \end_layout
 
 \begin_layout Standard
 
 \series bold
-Expected date of completion: June 1st, 2015.
+Expected date of delivery: May 1st, 2015.
 \end_layout
 
 \begin_layout Section
@@ -941,7 +952,7 @@ As seen in the background information, there is an opportunity for a new
  As a cost-benefit analysis is crucial during the making of software specificati
 ons, or creating use-case diagrams, the features provided by SecuritySoftware
  could be an asset to go along these.
- For a year long thesis, there's not much time to develop a fully functional
+ For a year long thesis, there is not much time to develop a fully functional
  software that would hit the market upon release.
  But, the discussion, results and evalutions found in the eventual thesis
  could provide the foundations for an idea and a prototype that could be
@@ -1124,6 +1135,42 @@ key "Oracle"
 
 Oracle.com Oracle Database 12c - Plug into the Cloud | URL: http://www.oracle.com/u
 s/products/database/overview/index.html [Accessed 29 May.
+ 2014].
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "ISMS"
+
+\end_inset
+
+Wikipedia.org Wikipedia Information Security Management System | URL: http://en.wi
+kipedia.org/wiki/Information_security_management_system [Accessed 5 June.
+ 2014].
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "ISO27001:2005"
+
+\end_inset
+
+Wikipedia.org ISO/IEC 27001:2005 | URL: http://en.wikipedia.org/wiki/ISO/IEC_27001:
+2005 [Accessed 5 June.
+ 2014].
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "ISO27001"
+
+\end_inset
+
+Iso.org ISO/IEC 27001 - Information Security Management | URL: http://www.iso.org/i
+so/home/standards/management-standards/iso27001.htm [Accessed 5 June.
  2014].
 \end_layout
 

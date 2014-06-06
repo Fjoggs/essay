@@ -14,7 +14,7 @@
    id="svg2"
    version="1.1"
    inkscape:version="0.48.4 r9939"
-   sodipodi:docname="research-method.png">
+   sodipodi:docname="research-method.svg">
   <defs
      id="defs4">
     <marker
@@ -40,15 +40,15 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="0.7"
-     inkscape:cx="145.71996"
+     inkscape:cx="148.5771"
      inkscape:cy="306.73138"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
      inkscape:window-width="1920"
-     inkscape:window-height="1014"
-     inkscape:window-x="1920"
-     inkscape:window-y="27"
+     inkscape:window-height="1161"
+     inkscape:window-x="3840"
+     inkscape:window-y="0"
      inkscape:window-maximized="1"
      fit-margin-top="0"
      fit-margin-left="0"
@@ -62,7 +62,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -80,16 +80,16 @@
        y="136.6479" />
     <text
        xml:space="preserve"
-       style="font-size:42.76964951px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
-       x="68.634712"
-       y="176.90141"
+       style="font-size:42.67605209px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       x="146.31084"
+       y="176.01724"
        id="text2989"
        sodipodi:linespacing="125%"
-       transform="scale(0.91578598,1.0919582)"><tspan
+       transform="scale(0.91779446,1.0895686)"><tspan
          sodipodi:role="line"
          id="tspan2991"
-         x="68.634712"
-         y="176.90141">Thesis/Software idea</tspan></text>
+         x="146.31084"
+         y="176.01724">Requirements</tspan></text>
     <rect
        style="fill:#d1d0d0;fill-opacity:1"
        id="rect2987-2"
@@ -106,28 +106,16 @@
        y="696.64795" />
     <text
        xml:space="preserve"
-       style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
-       x="157.14287"
-       y="456.64789"
+       style="font-size:46.04870224px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       x="161.56558"
+       y="459.09244"
        id="text3786"
-       sodipodi:linespacing="125%"><tspan
+       sodipodi:linespacing="125%"
+       transform="scale(0.93539061,1.0690721)"><tspan
          sodipodi:role="line"
          id="tspan3788"
-         x="157.14287"
-         y="456.64789">Innovation</tspan></text>
-    <text
-       xml:space="preserve"
-       style="font-size:36.04908752px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
-       x="64.349907"
-       y="467.01889"
-       id="text3790"
-       sodipodi:linespacing="125%"
-       transform="scale(0.93976102,1.0641003)"><tspan
-         sodipodi:role="line"
-         id="tspan3792"
-         x="64.349907"
-         y="467.01889"
-         style="font-size:32.44417953px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;font-family:Sans;-inkscape-font-specification:Sans">(Implementation/research)</tspan></text>
+         x="161.56558"
+         y="459.09244">Innovation</tspan></text>
     <text
        xml:space="preserve"
        style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
@@ -172,14 +160,14 @@
     <text
        xml:space="preserve"
        style="font-size:38.78046799px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
-       x="499.75821"
-       y="431.64532"
+       x="492.39072"
+       y="460.73068"
        id="text4672"
        sodipodi:linespacing="125%"
        transform="scale(0.96951167,1.0314471)"><tspan
          sodipodi:role="line"
          id="tspan4674"
-         x="499.75821"
-         y="431.64532">New iteration</tspan></text>
+         x="492.39072"
+         y="460.73068">New iteration</tspan></text>
   </g>
 </svg>

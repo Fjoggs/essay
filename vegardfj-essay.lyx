@@ -417,9 +417,12 @@ key "STREAM"
 \end_inset
 
 , created by Acuity Risk Management.
- They created an application to work alongside this software that would
- monitor the information provided in STREAM to automatically report the
- compliance with the ISO 27001 standard.
+ By feeding it various information regarding the company and its structure,
+ it could output risks analysis relevant to the standards spoken of in the
+ section above.
+ To help this process further, they also created an application that would
+ monitor the information provided to STREAM and automatically report the
+ compliance with specifically the ISO/IEC 27001 standard.
  
 \end_layout
 
@@ -434,7 +437,7 @@ key "vsRisk"
  that lets the user input various information about their company such as
  asset owners, risk assessments, threats and more.
  This tool then use this data to create different reports that helps companies
- to comply with the requirements in the ISO 27001 standard.
+ to comply with the requirements in the ISO/IEC 27001 standard.
 \end_layout
 
 \begin_layout Subsection

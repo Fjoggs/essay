@@ -3,6 +3,9 @@
 \begin_document
 \begin_header
 \textclass article
+\begin_preamble
+\usepackage{ifikompendium}
+\end_preamble
 \use_default_options true
 \maintain_unincluded_children false
 \language english
@@ -61,7 +64,54 @@
 \begin_body
 
 \begin_layout Standard
-Front Page
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+title{Problem Analysis:}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+subtitle{Ensuring secure application development using the ASVS Standard}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+author{Vegard Fjogstad}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+date{12th of June, 2014}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+ififorside
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
 \begin_inset Newpage newpage
 \end_inset
 
@@ -87,9 +137,6 @@ LatexCommand tableofcontents
 \end_inset
 
 
-\end_layout
-
-\begin_layout Standard
 \begin_inset Newpage newpage
 \end_inset
 
@@ -137,12 +184,12 @@ key "Avast"
 
 \end_inset
 
- are some examples of companies that have created various softwares for
- security.
- Mostly virus scanning programs and firewall applications, but security
- related issues still haven't reached a significant part of the planning
- process of software development.
- Instead of repairing damages after an attack, why not prevent them from
+ are some examples of companies that have created security related software.
+ 
+\end_layout
+
+\begin_layout Standard
+Instead of repairing damages after an attack, why not prevent them from
  happening in the first place.
  
 \end_layout
@@ -166,10 +213,10 @@ The structure of this document is as follows.
  strength and weaknesses.
  Section 3 summarize needs and artifacts, and in section 4 we will list
  the stakeholders.
- The sucess criteria for these stakeholders are listed and explained in
+ The success criteria for these stakeholders are listed and explained in
  section 5, while section 6 explains the artifacts we listed in section
- 3 and highlights how to evalute whether or not they could be called a success
- when the project is complete.
+ 3 and highlights how to evaluate whether or not they could be called a
+ success when the project is complete.
  Section 7 gives an overview to the research plan, showing milestones and
  their respective dates.
  Finally, in section 8, we show our conclusion.
@@ -184,7 +231,7 @@ Security related practices and frameworks are split into different camps.
  Some focus on improving security during the implementation phase of software
  development, while others analyse already working applications.
  In this section we will mention some of the methods, standards and tools
- surrounding this subject and highlight the gaps that this thesis would
+ surrounding these subjects and highlight the gaps that this thesis would
  try to fill.
 \end_layout
 
@@ -214,8 +261,8 @@ Perform Dynamic Analysis
 , which includes running a software that monitors an application and checks
  for critical security problems.
  This step is performed with an already running version of an application,
- meaning it is of no use to someone who's still in the planning phase of
- software development.
+ meaning it is of no use to someone who are still in the planning phase
+ of software development.
 \end_layout
 
 \begin_layout Standard
@@ -224,7 +271,7 @@ A different approach is the Information Security Management System.
 \begin_inset Quotes eld
 \end_inset
 
-concerned with information security managment or IT related risks
+concerned with information security management or IT related risks
 \begin_inset Quotes erd
 \end_inset
 
@@ -237,7 +284,7 @@ key "ISMS"
 
 .
  ISMS main goal is to minimize risk and reduce the impact a security breach
- on a system could have.
+ could have.
  Where the SDL process revolves around the development of software and creating
  design specifications covering security issues, ISMS focuses more on management.
  Security breaches could happen from inside the company, by their own employees
@@ -246,7 +293,7 @@ key "ISMS"
 
 \begin_layout Standard
 As touched on in the introduction, a different method to prevent security
- issues is to design software to be secure form the ground up.
+ issues is to design software to be secure from the ground up.
  This is known by several different names, such as 
 \begin_inset Quotes eld
 \end_inset
@@ -308,8 +355,8 @@ key "ISO27001:2005"
 \end_inset
 
 , which is covering cyber security related issues.
- This standard was in 2013 canceled with the publication of the ISO/IEC
- 27001:2013 standard 
+ The standard was in 2013 canceled with the publication of the latest revision,
+ ISO/IEC 27001:2013 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "ISO27001:2013"
@@ -326,7 +373,7 @@ key "ISO27001"
 .
  The newest revision changed some of its controls to better support newer
  technologies like Cloud Computing.
- The 27001 standard focuses on management, providing with a set of requirements
+ The 27001 standard focuses on management, providing a set of requirements
  to properly assess a company's risks and how to prevent them in a step-by-step
  process 
 \begin_inset CommandInset citation
@@ -339,7 +386,7 @@ key "ISO27001-summary"
 \end_layout
 
 \begin_layout Standard
-The real benefits of these standards is, with a proof of certification,
+The real benefits of these standards are, with a proof of certification,
  customers can be sure that a company is using proper practices to make
  sure that their sensitive information is secure from external and internal
  threats.
@@ -362,14 +409,15 @@ key "SoGP"
 \end_inset
 
 , published by the Information Security Forum (ISF).
- While it says standard in the name, it is a guide providing information
- on identifying and managing security risks.
+ While the name says standard, it is a guide providing information on identifyin
+g and managing security risks.
  In 2011, SoGP was updated to make it cover the requirements for an ISMS
  that was set out in the ISO 27001 standard.
 \end_layout
 
 \begin_layout Standard
-More related to software development is an organization known as 
+More related to software development itself, is an organization known as
+ 
 \begin_inset Quotes eld
 \end_inset
 
@@ -390,6 +438,37 @@ key "Owasp"
  In 2008 they published their first standard, namely the Application Security
  Verification Standard (ASVS) that provide requirements for measuring what
  degree of trust that can be placed in a web application.
+ Some of the requirements found in this standard vary from authentication,
+ access control, error handling, malicious controls and more 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "List-asvs-1"
+
+\end_inset
+
+.
+ ASVS lets the user set a risk level, from one to three, depending on the
+ level of security required for the application.
+ Level one provides security against vulnerabilities that are easy to discover.
+ Level two is achieved if the application can defend against vulnerabilities
+ that pose moderate-to-serious risk and level three requires an application
+ that can 
+\begin_inset Quotes eld
+\end_inset
+
+adequately defend against all advanced application vulnerabilities, as well
+ as demonstrate principles of good security design
+\begin_inset Quotes erd
+\end_inset
+
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "ASVS Pdf"
+
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Subsection
@@ -402,24 +481,25 @@ In the introduction we briefly mentioned software companies like Norton
  They provide both companies and private persons with security tools like
  firewall applications and anti-virus software.
  These are tools that provide protection against security breaches via for
- example applications with security holes, visiting web sites with malicious
+ example applications with security holes, visiting websites with malicious
  intents, out of date firmware on network routers or the operating system
  itself.
 \end_layout
 
 \begin_layout Standard
-Software companies have been creating tools to monitor and manage risks.
- One of these is a software called STREAM 
+Several software companies have been creating tools to monitor and manage
+ risks, and one of these are Acuity Risk Management.
+ They've created a software called STREAM 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "STREAM"
 
 \end_inset
 
-, created by Acuity Risk Management.
- By feeding it various information regarding the company and its structure,
- it could output risks analysis relevant to the standards spoken of in the
- section above.
+.
+ By feeding the software various information regarding the user's company
+ and its structure, it could output risks analysis relevant to the ISO standard
+ mentioned in the section above.
  To help this process further, they also created an application that would
  monitor the information provided to STREAM and automatically report the
  compliance with specifically the ISO/IEC 27001 standard.
@@ -440,32 +520,49 @@ key "vsRisk"
  to comply with the requirements in the ISO/IEC 27001 standard.
 \end_layout
 
+\begin_layout Standard
+One of the tools that support the ASVS Standard is a plugin for an application
+ called Fiddler.
+ This plugin, named Watcher, is developed by Casaba and can perform some
+ OWASP ASVS activities, which you can then use to manually review it in
+ comparison with the requirements found in ASVS.
+\end_layout
+
 \begin_layout Subsection
 Gap
 \end_layout
 
 \begin_layout Standard
 These tools provide ways to ensure the correct policies are in place to
- comply with requirements found in the ISO 27001 standard.
- They focus on providing the right foundations for companies, while ignoring
- aspects surrounding software development.
- While this falls naturally, seeing how the standards focus is on management,
- there is potential for a software that would use the requirements found
- in these standards and combine them with a software development specification,
- creating a list of potential security issues that would not comply with
- these requirements.
- By following an already specified standard such as the ISO 27001 or the
- ASVS, potential users of such a software could then inform their customers
- that the applications they are using have been following the guidelines
- of a known security standard, ensuring that the application is safe to
- use.
+ comply with requirements found in the highlighted standards.
+ The ISO 27001 standard already have a few tools that performs checks, and
+ compare it to the requirements, but ASVS is lacking in this department.
+ The plugin listed does not work with ASVS directly, but provide the means
+ to let the user compare results manually.
+ There is potential for a software that could take a software specification
+ and compare it directly with the requirements found in the ASVS Standard.
+ This software would then output the necessary measures that has to be taken,
+ or the changes needed in the specification to comply with the requirements.
 \end_layout
 
 \begin_layout Standard
 ASVS in particular provides a good foundation for such a software, as its
- focus is on web applications and not management as in the 27001 standard.
+ focus is on web applications.
+ Web applications working together with cloud are becoming increasingly
+ popular, and they will continue to grow as the internet grows even larger
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Cloud"
+
+\end_inset
+
+.
+ This software would output the needed changes that has to be done in order
+ to comply with the standard.
  In the following sections, we will discuss what such a software could look
- like, and what it would take to consider it a success.
+ like, and the criteria required to consider it a success.
+ 
 \end_layout
 
 \begin_layout Section
@@ -474,11 +571,14 @@ Objective of the Thesis
 
 \begin_layout Standard
 How can we best design an application, hereby referred to as SecuritySoftware,
- to solve the needs we've highlighted so far.
- There is a need for a process to handle these, and the software to implement
+ to solve the needs highlighted in the previous section.
+\end_layout
+
+\begin_layout Standard
+There is need for a process to handle these needs, and the software to implement
  that process.
  The goal for SecuritySoftware is to provide developers with a tool to help
- plan for features that are secure against external threats like attacks
+ implementing features that are secure against external threats like attacks
  through security holes, viruses and poor programming solutions (an example
  would be using Statements 
 \begin_inset CommandInset citation
@@ -494,7 +594,7 @@ key "PreparedStatement"
 
 \end_inset
 
-).
+ when developing with Java).
  This software has to be usable by an end user and consist of the following
  main features:
 \end_layout
@@ -508,7 +608,7 @@ Usefulness
 \end_layout
 
 \begin_layout Itemize
-Acceptable coverage on security issues
+Acceptable coverage related to ASVS
 \end_layout
 
 \begin_layout Itemize
@@ -543,6 +643,8 @@ Determining whether or not something is useful is often decided by the end
  The goal for SecuritySoftware is to provide a service that would analyse
  a software specification and provide a list of possible security risks
  and the measures that has to be taken.
+ The output would ensure that the software complies with the ASVS standard,
+ meaning a user has a level of assurance that the application is secure.
  Making sure that it stays updated with the latest issues and solutions
  is of utmost importance to make sure it stays useful.
 \end_layout
@@ -556,10 +658,10 @@ Security issues are constantly being discovered, and the correct measures
  that have to be taken to prevent them.
  For SecuritySoftware to provide an acceptable coverage, the application
  has to be easily updated to stay relevant.
- There will always be issues that have not been discovered yet, but as long
- as the database providing information is being maintained, SecuritySoftware
- should be able to keep up with the discovery of new security issues and
- the measures that has to be taken.
+ The ASVS Standard might see new revisions being released and this could
+ include new measures.
+ The database providing SecuritySoftware with information has to be maintained,
+ making the application able to keep up with the changes.
 \end_layout
 
 \begin_layout Paragraph
@@ -568,13 +670,21 @@ Resource efficiency
 
 \begin_layout Standard
 Slow and inefficient applications are one of the more annoying problems
- for software developmers.
+ for software developers.
  Being held back by the software itself is a waste of time that might not
- wasteable.
- SecuritySoftware aims to provide a service that will run efficient on modern
- computers, and let the user be the possible bottleneck, and not the system
- itself.
  
+\begin_inset Quotes eld
+\end_inset
+
+wasteable
+\begin_inset Quotes erd
+\end_inset
+
+.
+ SecuritySoftware aims to provide a service that will run efficient on modern
+ computers, meaning the system requirements are low enough to allow multitasking
+ with other applications simultaneously.
+ The bottleneck, if any, should not be the software but the user.
 \end_layout
 
 \begin_layout Paragraph
@@ -582,12 +692,8 @@ Scalability
 \end_layout
 
 \begin_layout Standard
-As highlighted in the background information, there are services provided
- that are unreachable for smaller companies because of cost.
- SecuritySoftware will aim to be usable for both large scale architectures
- and smaller sized projects.
- This will make it available for both large and small software development
- teams.
+SecuritySoftware will be usable for both large scale architectures and smaller
+ sized projects.
 \end_layout
 
 \begin_layout Subsection
@@ -630,7 +736,7 @@ System Architect
 The end user of SecuritySoftware is called a system architect.
  When the software reaches a useable state, the system architect would be
  able to use the program to analysis a system specification.
- In it's current iteration, there are no plans for requiring a consultant
+ In its current iteration, there are no plans for requiring a consultant
  to provide assistance with the process.
 \end_layout
 
@@ -639,10 +745,9 @@ Maintenance Developer
 \end_layout
 
 \begin_layout Standard
-For SecuritySoftware to stay relevant in an ever changing software development
- world, the system needs to be updated regulary.
+For SecuritySoftware to stay relevant, the system needs to be updated regularly.
  A maintenance developer would update the database with the latest information
- regarding security leaks, measures and other relevant information.
+ regarding the ASVS standard.
  Other responsibilities such as keeping the software bug free and usable
  on newer hardware, also falls to the maintenance developer.
  
@@ -654,8 +759,9 @@ Operation
 
 \begin_layout Standard
 SecuritySoftware gets all its information from a database, and this database
- has to stay online and be maintained regulary.
- This is the managements responsibility.
+ has to stay online and be maintained from an operational point of view.
+ Updating the content of the database is the maintenance developers responsibili
+ty.
 \end_layout
 
 \begin_layout Section
@@ -664,8 +770,8 @@ Success Criteria
 
 \begin_layout Standard
 In light of the stakeholders, we will highlight what their needs are and
- define some criteria that will be used when evaluating whether or not our
- artifacts were a success.
+ define criteria that will be used when evaluating whether or not the highlighte
+d artifacts were a success.
 \end_layout
 
 \begin_layout Subsection
@@ -696,7 +802,7 @@ Usefulness
 \end_layout
 
 \begin_layout Itemize
-Acceptable coverage on security issues
+Acceptable coverage related to ASVS
 \end_layout
 
 \begin_layout Itemize
@@ -737,7 +843,7 @@ One of the main responsibilities for a maintenance developer is to make
  security issues and measures.
  Instead of updating the database manually via for example SQL, SecuritySoftware
  will support this natively.
- Adding information to the database is a seperate feature of the application,
+ Adding information to the database is a separate feature of the application,
  alongside the security process itself.
 \end_layout
 
@@ -748,10 +854,10 @@ Modularity
 \begin_layout Standard
 New issues and measures might require new features in SecuritySoftware.
  To make implementing new features as easy as possible, SecuritySoftware
- should be developed with modules, meaning that you could update one part
+ will be developed with modules, meaning that you could update one part
  of the system without touching other features.
- This would also make it easier for maintenance developers to troubleshoot
- features that aren't working or have known bugs.
+ This also makes it easier for maintenance developers to troubleshoot features
+ that aren't working or have known bugs.
 \end_layout
 
 \begin_layout Subsubsection
@@ -775,14 +881,14 @@ Operations only responsibility is to make sure the database is up and running.
  Most of that lies within operation itself.
  Making sure that the database is running on a solid server is outside the
  bounds of SecuritySoftwares responsibility, but making sure that the database
- itself is using a modern solution like MySQL or Oracle are 
+ itself is using a modern solution like MySQL or Oracle 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "Oracle"
 
 \end_inset
 
-.
+ are part of them.
  
 \end_layout
 
@@ -805,13 +911,13 @@ For SecuritySoftware to be considered a success, the following criteria
 \end_layout
 
 \begin_layout Enumerate
-the application is easy to use and require no prior knowledge surrounding
- security related application
+the application is easy to use and require no prior knowledge to the ASVS
+ standard
 \end_layout
 
 \begin_layout Enumerate
-the application is providing security related coverage for both large and
- small architectures
+the application is providing the user with system specifications that comply
+ with the requirements found in ASVS
 \end_layout
 
 \begin_layout Enumerate
@@ -820,13 +926,17 @@ the application is implemented in a way to allow updates and bug fixes without
 \end_layout
 
 \begin_layout Enumerate
-the application's knowledgebase is updated continously to make sure SecuritySoft
-ware stay relevant and useful
+the application's knowledge base is updated continuously to make sure SecuritySo
+ftware stay relevant and useful
 \end_layout
 
 \begin_layout Enumerate
-the application's knowledgebase is easily updated to cover criteria number
- 4
+the application's knowledge base is easily updated to cover criteria four
+\end_layout
+
+\begin_layout Enumerate
+the application runs natively on (at least) Windows 8 and 7, Ubuntu 14.04
+ & OSX 10.8
 \end_layout
 
 \begin_layout Subsubsection
@@ -838,7 +948,7 @@ For the end user process description to be considered a success...
 \end_layout
 
 \begin_layout Enumerate
-the process has to be logical and easily understandable
+the process has to be logical and easily understandable for new users
 \end_layout
 
 \begin_layout Enumerate
@@ -846,7 +956,8 @@ the process has to be precise
 \end_layout
 
 \begin_layout Enumerate
-the process has to be time efficient
+the process should take no more than 15 minutes for someone already familiar
+ with it
 \end_layout
 
 \begin_layout Section
@@ -876,7 +987,14 @@ status open
 \begin_inset Caption
 
 \begin_layout Plain Layout
-Research methods
+Research methods 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "sintef"
+
+\end_inset
+
+
 \end_layout
 
 \end_inset
@@ -893,14 +1011,14 @@ Research methods
 Software development and theses use the same approach from inception to
  completion.
  See Figure 1 for an overview of this approach.
- When needs arise for something new, a theory or an idea is presented.
- This idea is then built on, either via scientific findings for a thesis
- or computer programming for an application.
- At some point, evalution is needed.
- There are different methods for evalution, such as field studies, surveys
+ When needs arise for something new, a set of requirements is presented.
+ These requirements are then built on, either via scientific findings for
+ a thesis or computer programming for an application.
+ At some point, evaluation is needed.
+ There are different methods for evaluation, such as field studies, surveys
  or even experiments in a laboratory.
- When evulation has completed, the cycle repeats itself.
- In light of the results, the idea or theory might need modification, which
+ When evaluation has completed, the cycle repeats itself.
+ In light of the results, the requirements might need modification, which
  is then built on with new findings or different programming methods.
  
 \end_layout
@@ -918,8 +1036,8 @@ Innovation
 \begin_layout Standard
 As presented in section 3.1, there are two artifacts for this thesis.
  SecuritySoftware, and the end user process description.
- While the software itself is important, the real backbone is the process
- description itself.
+ While the software itself is important, the backbone of the project is
+ the process description itself.
  
 \end_layout
 
@@ -928,22 +1046,20 @@ Process Description
 \end_layout
 
 \begin_layout Standard
-The process description is a 4 step process where the user starts with a
- software specification and end up with a list of security issues and the
- measures that has to be taken to prevent them.
- The first step is where the end user lists all relevant clients the specificed
- system is going to be used on.
- Examples include iOS, Android, web browsers etc.
- After this step has been completed, the user is asked to specify how the
- server side will look like.
- Third step involve listing the features that this system will provide,
- and how these features communicate from the client to the server.
+The process description is a three step process.
+ The first step is a risk evaluation of the application that the end user
+ will be developing.
+ The user then maps this to the security levels found in the ASVS Standard.
+ After this step has been completed, the user lists all the features that
+ the application will provide.
 \end_layout
 
 \begin_layout Standard
-Once these 3 steps have been completed, the analysis steps in.
- By combining the information provided in the previous steps and using this
- to query the SecuritySoftware database.
+Once these two steps have been completed, the analysis steps in.
+ By combining the information provided in the previous steps, SecuritySoftware
+ uses this to query the database.
+ The result is a list of requirements, that changes based on the ASVS risk
+ level set in step one.
  This step is automated by the software running the process, meaning the
  user will have no control over how the analysis is performed.
 \end_layout
@@ -954,11 +1070,11 @@ The Software
 
 \begin_layout Standard
 SecuritySoftware will provide the user with a graphical user interface (GUI)
- that will help guiding through the each step in the process.
+ that will help guiding the system architect through each step in the process.
  Maintenance developers will download a seperate version of the application,
- to gain access to the special features regarding updating the database.
+ to gain access to the special features relevant to updating the database.
  Along the way, helpful information will be provided to make the process
- as easy and as smooth as possible.
+ as easy and smooth as possible.
  
 \end_layout
 
@@ -979,13 +1095,12 @@ Evalution
 \end_layout
 
 \begin_layout Standard
-Evalutating a software is one of the major aspects of development.
- Unknown issues, weird graphical solutions and awkward language could slip
- unnoticed for the development team that are focused on the development
- itself.
+Evalutating a software is important to ensure the success of SecuritySoftware.
+ Unknown issues, weird graphical solutions and awkward use of language could
+ go unnoticed by the development team.
  For SecuritySoftware and the process description, the best way to evaluate
  would be through a field study.
- This would provide the precision and realism to help fine tuning both the
+ This would provide the precision and realism to help fine tune both the
  process, and the software itself.
  A way to go about this, would be to provide a number of people with a copy
  of the software and giving them a task to complete.
@@ -1000,19 +1115,17 @@ Select the Appropiate Research Method
 
 \begin_layout Standard
 The reasoning behind choosing a field study, is because it provides the
- realism needed to properly evalute the performance of the software and
+ realism needed to properly evaluate the performance of the software and
  if the process is natural for a system architect to use.
- Another possiblity would be to use a survey, asking test subjects whether
+ Another possibility would be to use a survey, asking test subjects whether
  or not they would be interested in using the services provided by SecuritySoftw
 are.
- Problem with this is that the results would be subjective.
- Each test subject have different ideas behind the best way of doing things,
- and might not agree with the theory that the software is built on.
- General evalution methods like surveys are avoided, because SecuritySoftware
- is a tool that is very specific in its target audience, and a study would
- provide better, more accurate results in a realistic environment.
- A field study could change the opinions of these, by letting them try it
- and experience the results it provides.
+ Problem with this is that each test subject have different ideas behind
+ the best way of doing things, and might not agree with the theory that
+ the software is built on.
+ General evaluation methods like surveys are avoided, because SecuritySoftware
+ is a tool that is very specific in its target audience, and a field study
+ would provide better, more accurate results in a realistic environment.
  
 \end_layout
 
@@ -1023,7 +1136,7 @@ Research Plan
 \begin_layout Standard
 Below is an overview of the planned milestones of this project, and their
  expected dates.
- The thesis itself is continously worked on during each phase.
+ The thesis itself is continuously worked on during each phase.
 \end_layout
 
 \begin_layout Subsection
@@ -1083,7 +1196,7 @@ Phase 4 - Evaluate Process Description and Design Document
 \begin_layout Standard
 There are bound to be problems with either the design or the process that
  will arise during the implementation phase.
- After phase 3 has completed, a proper evalution is needed to prepare for
+ After phase 3 has completed, a proper evaluation is needed to prepare for
  the next implementation phase.
  
 \end_layout
@@ -1117,7 +1230,7 @@ Phase 6 - Re-evaluation
 \end_layout
 
 \begin_layout Standard
-After implementation has completed, a re-evalution according to section
+After implementation has completed, a re-evaluation according to section
  6.2 is needed to verify if the success criteria has been met.
  
 \end_layout
@@ -1149,7 +1262,8 @@ Conclusion
 \begin_layout Standard
 As seen in the background information, there is an opportunity for a new
  kind of software to emerge on the development market.
- A lightweight, cheap and easy to use software for security related issues.
+ A lightweight, cheap and easy to use software for security related issues
+ that are covered in the ASVS Standard.
  Where other solutions provide features to help during development or after,
  SecuritySoftware aims to target issues earlier in the planning phase.
  As a cost-benefit analysis is crucial during the making of software specificati
@@ -1157,7 +1271,7 @@ ons, or creating use-case diagrams, the features provided by SecuritySoftware
  could be an asset to go along these.
  For a year long thesis, there is not much time to develop a fully functional
  software that would hit the market upon release.
- But, the discussion, results and evalutions found in the eventual thesis
+ But, the discussion, results and evaluations found in the eventual thesis
  could provide the foundations for an idea and a prototype that could be
  developed further.
 \end_layout
@@ -1512,6 +1626,85 @@ key "ASVS"
 
 Owasp.org Category:OWASP Application Security Verification Standard Project
  | URL: https://www.owasp.org/index.php/ASVS [Accessed 6 Jun.
+ 2014].
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "List-asvs-1"
+
+\end_inset
+
+Clerkendweller.com OWASP ASVS for Web Applications 2013 Beta Release | URL:
+ https://www.clerkendweller.com/2013/9/24/OWASP-ASVS-for-Web-Applications-2013-Bet
+a-Release [Accessed 12 Jun.
+ 2014].
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "Watcher"
+
+\end_inset
+
+Watcher: Web security testing tool and passive vulnerability scanner | URL:
+ http://websecuritytool.codeplex.com/
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "Cloud"
+
+\end_inset
+
+Forbes Roundup Of Cloud Computing Forecasts And Market Estimates, 2014 |
+ URL: http://www.forbes.com/sites/louiscolumbus/2014/03/14/roundup-of-cloud-comput
+ing-forecasts-and-market-estimates-2014/ [Accessed 12 Jun.
+ 2014].
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "sintef"
+
+\end_inset
+
+Ida Solheim and Ketil Stølen.
+ 
+\begin_inset Quotes eld
+\end_inset
+
+Technology Research Explained
+\begin_inset Quotes erd
+\end_inset
+
+, SINTEF REPORT 2007-03-20.
+ Print.
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "ASVS Pdf"
+
+\end_inset
+
+OWASP.
+ 
+\begin_inset Quotes eld
+\end_inset
+
+OWASP Application Security Verification Standard 2.0 (beta) 2013
+\begin_inset Quotes erd
+\end_inset
+
+.
+ Print.
+ | Available at URL: https://www.owasp.org/index.php/ [Accessed 12 Jun.
  2014].
 \end_layout
 
